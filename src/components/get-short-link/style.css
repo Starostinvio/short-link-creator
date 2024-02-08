@@ -1,0 +1,46 @@
+.GetShortLink {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+
+  margin-bottom: 20px;
+}
+
+.GetShortLink > :not(:last-child) {
+  margin-right: 10px;
+}
+
+.GetShortLink-field {
+  width: 500px;
+  height: 57px;
+  border-radius: 15px;
+
+  text-decoration: none;
+  outline: none;
+  border: 2px solid rgb(242, 243, 245);
+  padding: 10px;
+
+  font-size: 18px;
+  color: rgb(31, 31, 44);
+}
+
+.GetShortLink-field::placeholder {
+  color: rgb(173, 173, 173);
+  font-size: 15px;
+}
+.GetShortLink-shorten {
+  width: 100px;
+  height: 57px;
+  border-radius: 15px;
+  background-color: rgb(26, 150, 252);
+  color: white;
+
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.GetShortLink-showLink {
+  display: flex;
+  justify-content: center;
+}

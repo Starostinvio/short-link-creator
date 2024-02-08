@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+Проект "Сервис коротких ссылок"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Добро пожаловать в проект "Сервис коротких ссылок"!
+Этот проект представляет собой веб-приложение, состоящее из трех основных страниц: страницы регистрации, страницы авторизации и основной страницы с функциональностью просмотра статистики по созданным коротким ссылкам.
 
-## Available Scripts
+Установка
 
-In the project directory, you can run:
+Склонируйте репозиторий с проектом на свой локальный компьютер:
+bash
+Copy code
+git clone https://github.com/your-username/short-link-service.git
 
-### `npm start`
+Перейдите в директорию проекта:
+bash
+Copy code
+cd short-link-service
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Установите зависимости:
+bash
+Copy code
+npm install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Запуск
 
-### `npm test`
+Для запуска проекта выполните следующую команду:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+npm start
+После этого проект будет доступен по адресу http://localhost:3000 в вашем браузере.
 
-### `npm run build`
+Функциональность
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Страница регистрации:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Позволяет пользователю зарегистрировать новый аккаунт в системе.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Страница авторизации:
 
-### `npm run eject`
+Позволяет пользователю войти в систему, используя свои учетные данные.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Основная страница:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Предоставляет пользователю доступ к основной функциональности сервиса.
+Просмотр статистики по созданным ссылкам в виде таблицы.
+Таблица содержит три столбца: короткая ссылка, исходная ссылка, количество переходов по короткой ссылке.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Реализована пагинация на стороне сервера (общее количество записей передается в хэдере x-total-count).
+Предоставляет возможность сортировки по столбцам.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Технологии
+React.js
+Redux Toolkit
+React Router
+React Transition Group
+TypeScript
+React-icons/io5
+clipboard
 
-## Learn More
+Вопросы и обратная связь
+Если у вас есть вопросы или предложения по улучшению проекта, не стесняйтесь обращаться к нам по адресу support@example.com.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Автор
+Проект разработал Старостин Андрей Дмитриевич.

@@ -1,0 +1,15 @@
+.ShortLinkPanel {
+  margin: 0 auto;
+  width: 550px;
+  height: 95px;
+  font-family: "Roboto";
+
+  padding: 17px;
+  background: white;
+  border-radius: 17px;
+  box-shadow: 1px 1px 3px rgb(219, 219, 219);
+}
+.ShortLinkPanel-title {
+  font-size: 20px;
+  font-weight: 500;
+}

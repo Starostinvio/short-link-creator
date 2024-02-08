@@ -1,0 +1,57 @@
+.ShortSortList {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+}
+.ShortSortList > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+.ShortSortList-box {
+  position: relative;
+  padding: 8px 7px 8px 7px;
+  width: 45px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid rgb(234, 235, 238);
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(245, 248, 250);
+}
+
+.ShortSortList-icon {
+  width: 17px;
+  height: 17px;
+  /* margin-left: 5px; */
+}
+
+.ShortSortList-panel {
+  position: absolute;
+  background: white;
+  z-index: 10;
+  top: 90%;
+  right: 0%;
+  width: 45px;
+
+  border: 1px solid rgb(234, 235, 238);
+  border-radius: 6px;
+  color: rgb(31, 31, 44);
+}
+
+.ShortSortList-panel li {
+  padding: 11px 4px 11px 9px;
+  cursor: pointer;
+}
+
+.ShortSortList-panel li:hover {
+  background: rgb(245, 245, 245);
+}

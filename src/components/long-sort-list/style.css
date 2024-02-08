@@ -1,0 +1,48 @@
+.SortList {
+  position: relative;
+  padding: 8px 14px 8px 9px;
+  width: 230px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid rgb(234, 235, 238);
+  border-radius: 6px;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(245, 248, 250);
+}
+
+.SortList-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.SortList-panel {
+  position: absolute;
+  background: white;
+  z-index: 10;
+  top: 90%;
+  right: 0%;
+  width: 230px;
+
+  border: 1px solid rgb(234, 235, 238);
+  border-radius: 6px;
+  color: rgb(31, 31, 44);
+}
+
+.SortList-panel li {
+  padding: 11px 4px 11px 9px;
+  cursor: pointer;
+}
+
+.SortList-panel li:hover {
+  background: rgb(245, 245, 245);
+}

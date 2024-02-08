@@ -1,0 +1,15 @@
+.HeadPanel {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+  background: white;
+  box-sizing: border-box;
+  padding: 10px 70px;
+  height: 65px;
+  display: flex;
+  justify-content: end;
+  align-self: center;
+  margin-bottom: 120px;
+
+  border-bottom: 1px solid rgb(232, 233, 236);
+}

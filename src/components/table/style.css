@@ -1,0 +1,68 @@
+.Table {
+  margin: 0 auto;
+  font-family: "Roboto";
+}
+.Table-panel {
+  width: 940px;
+  background: white;
+
+  border: 1px solid rgb(234, 235, 238);
+  border-radius: 7px;
+}
+.Table-panel {
+}
+.Table-panel-sort {
+  display: flex;
+  width: 100%;
+  padding: 11px;
+  border-bottom: 1px solid rgb(234, 235, 238);
+}
+.Table-panel-sort > *:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* .Table-panel-sort > div:not(:last-child){
+    margin-right: 
+} */
+.Table-panel-caption {
+  display: grid;
+  grid-template-columns: 20% 67% 13%;
+  border-bottom: 1px solid rgb(234, 235, 238);
+  padding: 13px 25px;
+
+  font-size: 12px;
+  color: rgb(172, 172, 176);
+  font-weight: 400;
+}
+.Table-panel-rows-title {
+}
+
+.Table-panel-rows {
+  display: grid;
+
+  grid-template-columns: 20% 67% 13%;
+  padding: 21px 25px;
+
+  font-size: 14px;
+  color: rgb(31, 31, 44);
+  font-weight: 500;
+}
+.Table-panel-rows:not(:last-child) {
+  border-bottom: 1px solid rgb(245, 247, 248);
+}
+.Table-panel-rows-item {
+  overflow: auto;
+
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.Table-panel-rows-item:focus {
+}
+
+.Table-panel-rows-item::-webkit-scrollbar {
+  height: 0px;
+}
+
+.count {
+  justify-self: center;
+}

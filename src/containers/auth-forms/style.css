@@ -1,0 +1,47 @@
+.AuthForms {
+  width: 100%;
+  position: relative;
+  padding: 0px 30px;
+  flex-grow: 1;
+
+  font-family: "Roboto";
+}
+.AuthForms-img-panel {
+  position: absolute;
+  bottom: 60%;
+  left: 14%;
+  width: 200px;
+  height: 150px;
+
+  border-radius: 50px;
+  background-color: rgb(248, 250, 252);
+}
+
+.AuthForms-img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.AuthForms-panel {
+  position: absolute;
+  left: 64%;
+}
+
+.alert-enter {
+  opacity: 0;
+  transform: translateX(100px);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 400ms, transform 400ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}

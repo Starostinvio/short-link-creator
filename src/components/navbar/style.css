@@ -1,0 +1,21 @@
+.Navbar {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.Navbar a {
+  margin-right: 60px;
+}
+.Navbar-link {
+  text-decoration: none;
+  color: rgb(48, 50, 68);
+  padding: 9px 14px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+.Navbar-link:hover {
+  font-weight: 500;
+}

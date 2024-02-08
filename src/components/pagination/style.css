@@ -1,0 +1,27 @@
+.Pagination {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex: 1;
+  border-radius: 5px;
+}
+
+.Pagination button {
+  padding: 8px 7px 8px 7px;
+  margin-right: 2px;
+  background: white;
+}
+.Pagination button:hover {
+  background: rgb(245, 248, 250);
+}
+.Pagination-item-one {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.Pagination-item-two {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.Pagination-page {
+  margin-bottom: 5px;
+}

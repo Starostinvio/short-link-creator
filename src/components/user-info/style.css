@@ -1,0 +1,124 @@
+.UserInfo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8px 5px 8px 9px;
+  border-radius: 10px;
+  font-family: "Roboto";
+}
+
+.UserInfo:hover {
+  background: rgb(245, 245, 245);
+}
+
+.UserInfo-title {
+  font-family: "Roboto";
+  font-weight: 500;
+
+  color: rgb(0, 0, 0);
+}
+.UserInfo-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  background: rgb(211, 211, 211);
+  color: rgb(211, 211, 211);
+
+  width: 33px;
+  height: 33px;
+  margin-right: 7px;
+}
+.UserInfo-img {
+}
+
+.user {
+  color: rgb(253, 253, 253);
+  width: 16px;
+  height: 16px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+}
+
+.UserInfo-list-panel {
+  position: absolute;
+  z-index: 70;
+  top: 90%;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+
+  padding-top: 8px;
+}
+
+.UserInfo-list {
+  right: 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: 115px;
+
+  background: white;
+  border-radius: 5px;
+
+  box-shadow: 1px 1px 2px 1px rgb(238, 236, 236);
+
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.UserInfo-list-profile {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  margin-bottom: 10px;
+
+  cursor: default;
+}
+
+.UserInfo-avatar-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  background: rgb(211, 211, 211);
+  color: rgb(211, 211, 211);
+
+  width: 29px;
+  height: 29px;
+  margin-right: 7px;
+
+  margin-bottom: 7px;
+}
+
+.user-small {
+  color: rgb(253, 253, 253);
+  width: 14px;
+  height: 14px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+}
+.UserInfo-list-profile > *:last-child {
+  text-align: center;
+  width: 100%;
+}
+
+.UserInfo-list > *:last-child {
+  display: flex;
+
+  padding: 8px 9px 8px 9px;
+  cursor: pointer;
+}
+
+.UserInfo-list > *:last-child:hover {
+  background: rgb(245, 245, 245);
+}
+
+.icon-lock {
+  color: rgb(5, 5, 5);
+  margin-left: 25px;
+}

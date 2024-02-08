@@ -1,0 +1,16 @@
+.page-toggle-enter {
+  opacity: 0.8;
+}
+.page-toggle-enter-active {
+  opacity: 1;
+
+  transition: opacity 250ms;
+}
+.page-toggle-exit {
+  opacity: 1;
+}
+.page-toggle-exit-active {
+  opacity: 0;
+
+  transition: opacity 250ms;
+}
