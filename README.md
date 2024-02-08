@@ -8,7 +8,7 @@
 Склонируйте репозиторий с проектом на свой локальный компьютер:
 bash
 Copy code
-git clone https://github.com/your-username/short-link-service.git
+git clone https://github.com/Starostinvio/short-link-creator.git
 
 Перейдите в директорию проекта:
 bash
@@ -57,8 +57,7 @@ TypeScript
 React-icons/io5
 clipboard
 
-Вопросы и обратная связь
-Если у вас есть вопросы или предложения по улучшению проекта, не стесняйтесь обращаться к нам по адресу support@example.com.
+Ссылка на сервер: https://short-link-creator.vercel.app/
 
 Автор
 Проект разработал Старостин Андрей Дмитриевич.
