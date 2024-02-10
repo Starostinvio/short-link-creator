@@ -10,13 +10,7 @@ function Layout() {
   const currentOutlet = useOutlet();
   const location = useLocation();
   const navigate = useNavigate();
-  // const state = useSelector(asyncSessionSelector);
 
-  // useEffect(() => {
-  //   if (location.pathname === "/auth") {
-  //     state.sessionReducer.exists && navigate("/");
-  //   }
-  // }, [state]);
   return (
     <>
       <SwitchTransition>

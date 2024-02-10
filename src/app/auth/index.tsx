@@ -48,7 +48,10 @@ function Auth() {
           </HeadPanel>
           <AuthForms page={currentPage}>
             {currentPage === "login" && (
-              <Login status={state.authReducer.status} />
+              <Login
+                status={state.authReducer.status}
+                errorMessage={state.authReducer.error}
+              />
             )}
             {currentPage === "signUp" && (
               <SignUp status={state.authReducer.status} />

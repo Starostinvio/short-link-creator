@@ -9,10 +9,13 @@ import UserInfo from "../../components/user-info";
 import HeadPanel from "../../components/head-panel";
 import Navbar from "../../components/navbar";
 import StatisticInfo from "../../containers/statistic-info";
+import { useAppDispatch } from "../../store/redux-hook";
+import { remindSession } from "../../store/auth/auth-actions";
 
 function Statistics() {
   const [authExists, setAuthExists] = useState<boolean | null>(null);
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const handleAuth = (page: "login" | "signUp") => {
     navigate("/auth", { replace: false, state: page });
   };
@@ -24,6 +27,10 @@ function Statistics() {
       setAuthExists(state.authReducer.exists);
     }
   }, [state]);
+
+  useEffect(() => {
+    dispatch(remindSession());
+  }, []);
 
   return (
     <PageLayout>

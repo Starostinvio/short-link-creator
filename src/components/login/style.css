@@ -16,13 +16,30 @@
   left: 64%; */
 }
 
+/* .Login-title {
+  font-size: 26px;
+  font-weight: 500;
+  color: black;
+  cursor: default;
+
+  margin-bottom: 45px;
+} */
+
 .Login-title {
   font-size: 26px;
   font-weight: 500;
   color: black;
   cursor: default;
 
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.Login-subtitle {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(161, 160, 161);
+
+  margin-bottom: 36px;
 }
 
 input::placeholder {
@@ -47,6 +64,12 @@ input:focus {
   font-weight: 500;
   font-size: 15px;
 }
+.Login-pass-box {
+  position: relative;
+  margin-bottom: 20px;
+
+  z-index: 1;
+}
 .Login-pass {
   width: 320px;
   height: 56px;
@@ -54,11 +77,37 @@ input:focus {
   border: 2px solid rgb(242, 243, 245);
   border-radius: 10px;
   padding: 0px 5px 0px 25px;
-  margin-bottom: 30px;
 
   font-family: "Roboto";
   font-weight: 500;
   font-size: 15px;
+}
+
+.Login-pass-icon-box {
+  position: absolute;
+  z-index: 10;
+  padding-left: 5px;
+  background: white;
+  /* height: 100%;
+  width: 15%; */
+  color: rgb(116, 116, 116);
+  top: 2px;
+  right: 2px;
+  width: calc(10% - 2px);
+  height: calc(100% - 4px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+.Login-pass-icon-box:hover {
+  color: black;
+}
+.Login-pass-open {
+  padding: 4px;
+  box-sizing: content-box;
 }
 
 .Login-submit {

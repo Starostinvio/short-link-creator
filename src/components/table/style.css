@@ -21,9 +21,6 @@
   margin-right: 15px;
 }
 
-/* .Table-panel-sort > div:not(:last-child){
-    margin-right: 
-} */
 .Table-panel-caption {
   display: grid;
   grid-template-columns: 20% 67% 13%;

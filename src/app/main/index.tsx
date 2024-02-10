@@ -12,10 +12,13 @@ import UserInfo from "../../components/user-info";
 import HeadPanel from "../../components/head-panel";
 import Navbar from "../../components/navbar";
 import ShortLinkPanel from "../../components/short-link-panel";
+import { useAppDispatch } from "../../store/redux-hook";
+import { remindSession } from "../../store/auth/auth-actions";
 
 function Main() {
   const [authExists, setAuthExists] = useState<boolean | null>(null);
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const handleAuth = (page: "login" | "signUp") => {
     navigate("/auth", { replace: false, state: page });
   };
@@ -23,16 +26,20 @@ function Main() {
   const state = useSelector(asyncSessionSelector);
 
   useEffect(() => {
-    if (typeof state.authReducer.exists === "boolean") {
+    if (state.authReducer.exists !== null) {
       setAuthExists(state.authReducer.exists);
     }
   }, [state]);
+
+  useEffect(() => {
+    dispatch(remindSession());
+  }, []);
 
   return (
     <>
       <PageLayout>
         <HeadPanel>
-          {typeof authExists === "boolean" &&
+          {authExists !== null &&
             (authExists ? (
               <>
                 <Navbar title="Статистика" link="/statistic" />
@@ -42,9 +49,7 @@ function Main() {
               <AuthPanel authPage={handleAuth} currentPage={"signUp"} />
             ))}
         </HeadPanel>
-        {typeof authExists === "boolean" && !authExists && (
-          <AccessControl exists={false} />
-        )}
+        {authExists !== null && !authExists && <AccessControl exists={false} />}
         <GetShortLink
           token={state.authReducer.token ? state.authReducer.token : ""}
         />

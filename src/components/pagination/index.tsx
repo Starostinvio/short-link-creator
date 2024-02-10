@@ -1,7 +1,7 @@
 import "./style.css";
 import { SlArrowRight } from "react-icons/sl";
 import { SlArrowLeft } from "react-icons/sl";
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 
 type PaginationProps = {
   sendId: (id: number) => void;
@@ -79,4 +79,4 @@ function Pagination({
   );
 }
 
-export default Pagination;
+export default memo(Pagination);

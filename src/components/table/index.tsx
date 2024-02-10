@@ -18,24 +18,6 @@ function Table({ children, links }: TableProps) {
   }
   type Sorted = LinkInfo[];
 
-  const arr: Sorted = [
-    {
-      short: "ERHFH",
-      base: "http://www.amason.com/super/puper/extra/ducer/small/tackevery-body/dance",
-      count: 5,
-    },
-    {
-      short: "57MFLD",
-      base: "http://www.bobibroun.com/super/puper/extra/ducer/small/tackevery-body/dance/dksfh;isdhf;osafsdjfkasdjfo'sdajfosjfoasj;ofajdfiojad",
-      count: 10,
-    },
-    {
-      short: "57MFLD",
-      base: "http://www.bobibroun.com/super/puper/extra/ducer/small/tackevery-body/dance",
-      count: 35,
-    },
-  ];
-
   useEffect(() => {
     setListLinks(links.list);
   }, [links]);

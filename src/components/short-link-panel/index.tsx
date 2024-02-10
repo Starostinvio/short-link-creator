@@ -1,7 +1,7 @@
 import "./style.css";
 import { ShortLinkInfo } from "../../types";
 import ClipboardJS from "clipboard";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface ShortLinkPanelProps {
   shortUrl: ShortLinkInfo;
@@ -42,10 +42,9 @@ function ShortLinkPanel({ shortUrl }: ShortLinkPanelProps) {
 
   return (
     <div className="ShortLinkPanel">
-      <button
-        className="ShortLinkPanel-title"
-        onClick={() => handleClick}
-      >{`https://front- test.hex.team/s/${shortUrl.short}`}</button>
+      <button className="ShortLinkPanel-title" onClick={() => handleClick()}>
+        {`https://front- test.hex.team/s/${shortUrl.short}`}
+      </button>
     </div>
   );
 }

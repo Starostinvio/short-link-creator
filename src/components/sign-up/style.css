@@ -36,18 +36,43 @@ input:focus {
   font-weight: 500;
   font-size: 15px;
 }
-.SignUp-pass {
+
+.Login-pass-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+.Login-pass {
   width: 320px;
   height: 56px;
   outline: none;
   border: 2px solid rgb(242, 243, 245);
   border-radius: 10px;
   padding: 0px 5px 0px 25px;
-  margin-bottom: 30px;
 
   font-family: "Roboto";
   font-weight: 500;
   font-size: 15px;
+}
+
+.Login-path-icon-box {
+  position: absolute;
+  background: inherit;
+  height: 100%;
+  width: 15%;
+  color: rgb(116, 116, 116);
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+.Login-path-icon-box:hover {
+  color: black;
+}
+.Login-pass-open {
+  padding: 4px;
 }
 
 .SignUp-submit {

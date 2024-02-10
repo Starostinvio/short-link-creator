@@ -4,7 +4,7 @@ import ShortSortList from "../../components/short-sort-list";
 import Table from "../../components/table";
 import { useAppDispatch } from "../../store/redux-hook";
 import "./style.css";
-import { useState, useReducer, useEffect } from "react";
+import { useState, useReducer, useEffect, useCallback } from "react";
 import { getSortList } from "../../store/statistics/statistics-actions";
 import { DataLinksInfo } from "../../types";
 
@@ -32,6 +32,16 @@ const initialState: SortReducer = {
   column: "По умолчанию",
   order: "По умолчанию",
 };
+
+const headlines1 = [
+  "По умолчанию",
+  "По короткой ссылке",
+  "По исходной ссылке",
+  "По переходам",
+];
+
+const headlines2 = ["По умолчанию", "По убыванию", "По возрастанию"];
+const headlines3 = [1, 2, 3, 4, 5];
 
 function handlerSort(state: SortReducer, action: any) {
   switch (action.type) {
@@ -76,6 +86,7 @@ function StatisticInfo({ token, links }: StatisticInfoProps) {
     } else if (state.column === "По переходам") {
       column = "counter";
     }
+
     let resultOrder;
     if (column !== "" && order === "") {
       resultOrder = "desc_" + column;
@@ -99,19 +110,9 @@ function StatisticInfo({ token, links }: StatisticInfoProps) {
     }
   }, [state]);
 
-  const handleCurrentId = (id: number) => {
+  const handleCurrentId = useCallback((id: number) => {
     setCurrentId(id);
-  };
-
-  const headlines1 = [
-    "По умолчанию",
-    "По короткой ссылке",
-    "По исходной ссылке",
-    "По переходам",
-  ];
-
-  const headlines2 = ["По умолчанию", "По убыванию", "По возрастанию"];
-  const headlines3 = [1, 2, 3, 4, 5];
+  }, []);
 
   return (
     <Table links={links}>

@@ -1,4 +1,4 @@
-import { ReducerType, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { signUp, login } from "./auth-actions";
 import { Status } from "../../types";
 import { User } from "../../types";
@@ -52,12 +52,19 @@ const authSlice = createSlice({
         state.status = "loading";
       })
       .addCase(login.fulfilled, (state, action) => {
-        localStorage.setItem("token", action.payload.tokenDate.access_token);
-        localStorage.setItem("username", action.payload.username);
-        state.token = action.payload.tokenDate.access_token;
-        state.user = { username: action.payload.username };
-        state.exists = true;
-        state.status = "received";
+        console.log("action payload", action.payload);
+        if (action.payload.tokenDate.access_token) {
+          localStorage.setItem("token", action.payload.tokenDate.access_token);
+          localStorage.setItem("username", action.payload.username);
+          state.token = action.payload.tokenDate.access_token;
+          state.user = { username: action.payload.username };
+          state.exists = true;
+          state.status = "received";
+          return state;
+        }
+        state.token = null;
+        state.exists = false;
+        state.status = "rejected";
         return state;
       })
       .addCase(login.rejected, (state, action) => {
