@@ -1,4 +1,4 @@
-.Pagination {
+/* .Pagination {
   display: flex;
   justify-content: end;
   align-items: center;
@@ -24,4 +24,61 @@
 }
 .Pagination-page {
   margin-bottom: 5px;
+} */
+
+.Pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1; */
+  border-radius: 5px;
+}
+.Pagination-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-right: 10px;
+  margin-bottom: 5%;
+  /* width: 90px; */
+
+  border-radius: 13px;
+
+  /* box-shadow: inset -1px -1px 2px rgb(235, 235, 235); */
+}
+
+.Pagination-list li {
+  flex-grow: 1;
+  padding: 4px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 30px; */
+  width: 22px;
+  border-radius: 7px;
+  background-color: white;
+  border: 1px solid rgb(238, 238, 238);
+  color: rgb(31, 31, 44);
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.Pagination-list li:not(:last-child) {
+  margin-right: 2px;
+}
+
+.Pagination-list .Pagination-item-focus {
+  font-weight: 600;
+  background: rgb(245, 248, 250);
+  background: white;
+  color: rgb(26, 150, 252);
+}
+
+@media (max-width: 492px) {
+  .Pagination-list {
+    margin-bottom: 15%;
+  }
 }

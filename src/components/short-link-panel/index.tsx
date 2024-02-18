@@ -1,7 +1,7 @@
 import "./style.css";
 import { ShortLinkInfo } from "../../types";
 import ClipboardJS from "clipboard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 interface ShortLinkPanelProps {
   shortUrl: ShortLinkInfo;

@@ -1,19 +1,29 @@
 .GetShortLink {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  font-family: "Roboto";
 
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 600px 100px;
+  grid-template-rows: auto;
+  row-gap: 10px;
+  column-gap: 10px;
+
+  margin: 100px auto auto;
+  font-family: "Roboto";
 }
 
+.GetShortLink-panel {
+}
+.GetShortLink-shortLink {
+  grid-column: 1/3;
+}
 .GetShortLink > :not(:last-child) {
   margin-right: 10px;
 }
 
 .GetShortLink-field {
-  width: 500px;
+  width: 100%;
   height: 57px;
+
   border-radius: 15px;
 
   text-decoration: none;
@@ -30,7 +40,7 @@
   font-size: 15px;
 }
 .GetShortLink-shorten {
-  width: 100px;
+  width: 100%;
   height: 57px;
   border-radius: 15px;
   background-color: rgb(26, 150, 252);
@@ -43,4 +53,40 @@
 .GetShortLink-showLink {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 920px) {
+  .GetShortLink {
+    grid-template-columns: 450px 100px;
+  }
+}
+
+@media (max-width: 479px) {
+  .GetShortLink {
+    flex-grow: 1;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 60% 20%;
+    row-gap: 0px;
+
+    padding: 0px 20px;
+    margin: 0px 0px;
+  }
+  .GetShortLink > :not(:last-child) {
+    margin-right: 0px;
+  }
+  .GetShortLink-field {
+    align-self: center;
+    width: 100%;
+  }
+  .GetShortLink > input {
+    margin-bottom: 15px;
+  }
+
+  .GetShortLink-shorten {
+    grid-row: 3/4;
+    align-self: start;
+    margin-right: 0px;
+    width: 100%;
+  }
 }

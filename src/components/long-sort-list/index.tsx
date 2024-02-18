@@ -1,9 +1,9 @@
 import "./style.css";
 import { useState, useRef, memo, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import React from "react";
+
 interface LongSortListProps {
-  headlines: string[];
+  headlines: { [key: string]: string };
   defaultTitle: string;
   sendId: (id: number) => void;
   currentId: number;
@@ -21,15 +21,22 @@ function LongSortList({
 }: LongSortListProps) {
   const [open, setOpen] = useState(false);
   const [mainTitle, setMainTitle] = useState(defaultTitle);
-  const headlinesRef = useRef(headlines);
-
-  useEffect(() => {
-    id === 0 && dispatch({ type: "COLUMN", payload: mainTitle });
-    id === 1 && dispatch({ type: "ORDER", payload: mainTitle });
-  }, [mainTitle]);
+  const headlinesRef = useRef(Object.values(headlines));
 
   const handleSelectTitle = (selectTitle: string) => {
     setMainTitle(selectTitle);
+
+    let resultSortValue: string = "";
+    for (let key in headlines) {
+      if (
+        headlines[key as keyof typeof headlines] === selectTitle &&
+        key !== "default"
+      ) {
+        resultSortValue = key;
+      }
+    }
+    id === 0 && dispatch({ type: "COLUMN", payload: resultSortValue });
+    id === 1 && dispatch({ type: "ORDER", payload: resultSortValue });
 
     sendId(id);
   };

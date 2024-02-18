@@ -1,29 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-.Login {
-  width: 100%;
-  position: relative;
-  padding: 0px 30px;
-  /* font-family: "SF Pro Text"; */
-  flex: 1;
-  font-family: "Roboto";
-}
-
 .Login-form {
   display: flex;
   flex-direction: column;
-  /* position: absolute;
-  left: 64%; */
 }
-
-/* .Login-title {
-  font-size: 26px;
-  font-weight: 500;
-  color: black;
-  cursor: default;
-
-  margin-bottom: 45px;
-} */
 
 .Login-title {
   font-size: 26px;
@@ -88,8 +68,6 @@ input:focus {
   z-index: 10;
   padding-left: 5px;
   background: white;
-  /* height: 100%;
-  width: 15%; */
   color: rgb(116, 116, 116);
   top: 2px;
   right: 2px;
@@ -150,4 +128,39 @@ input:focus {
   100% {
     transform: rotate(360deg);
   }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 479px) {
+  .Login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+  }
+
+  .Login-title {
+    align-self: flex-start;
+  }
+
+  .Login-subtitle {
+    align-self: flex-start;
+  }
+
+  .Login-name {
+    width: 100%;
+  }
+  .Login-pass-box {
+    width: 100%;
+  }
+  .Login-pass {
+    width: 100%;
+  }
+  .Login-submit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
 }

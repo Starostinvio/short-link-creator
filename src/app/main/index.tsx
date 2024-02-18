@@ -2,9 +2,7 @@ import { useNavigate } from "react-router-dom";
 import AccessControl from "../../components/access-control";
 import AuthPanel from "../../components/auth-panel";
 import GetShortLink from "../../components/get-short-link";
-import Login from "../../components/login";
 import PageLayout from "../../components/page-layout";
-import SignUp from "../../components/sign-up";
 import { useSelector } from "react-redux";
 import { asyncSessionSelector } from "../../store/auth/async-auth-selector";
 import { useEffect, useState } from "react";
@@ -52,10 +50,11 @@ function Main() {
         {authExists !== null && !authExists && <AccessControl exists={false} />}
         <GetShortLink
           token={state.authReducer.token ? state.authReducer.token : ""}
-        />
-        {state.shortLinkReducer.shortLink && (
-          <ShortLinkPanel shortUrl={state.shortLinkReducer.shortLink} />
-        )}
+        >
+          {state.shortLinkReducer.shortLink && (
+            <ShortLinkPanel shortUrl={state.shortLinkReducer.shortLink} />
+          )}
+        </GetShortLink>
       </PageLayout>
     </>
   );

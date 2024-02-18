@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@300..700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+Bengali:wght@100..900&family=Quicksand:wght@300..700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 .HeadPanel {
   width: 100%;
   position: relative;
@@ -7,9 +10,67 @@
   padding: 10px 70px;
   height: 65px;
   display: flex;
+
   justify-content: end;
+
   align-self: center;
-  margin-bottom: 120px;
 
   border-bottom: 1px solid rgb(232, 233, 236);
+}
+
+.HeadPanel-logo-box {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.HeadPanel-logo {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 19px;
+
+  color: rgb(209, 209, 209);
+
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  cursor: default;
+}
+
+@media (max-width: 992px) {
+  .HeadPanel {
+    padding: 10px 35px;
+  }
+}
+
+@media (max-width: 720px) {
+  .HeadPanel {
+    height: 58px;
+    padding: 7px 30px;
+  }
+}
+
+@media (max-width: 479px) {
+  .HeadPanel {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 72px;
+    padding: 14px 10px;
+
+    border-bottom: none;
+    background-color: rgb(248, 250, 252);
+  }
+  .HeadPanel-logo-box {
+    flex-grow: 0;
+    align-self: center;
+    margin-bottom: 4px;
+  }
+  .HeadPanel-logo {
+    font-size: 20px;
+  }
 }

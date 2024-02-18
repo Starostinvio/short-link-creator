@@ -55,3 +55,41 @@
 .ShortSortList-panel li:hover {
   background: rgb(245, 245, 245);
 }
+
+.ShortSortList-mobile {
+  display: none;
+}
+.ShortSortList-mobile-mainTitle {
+  width: 5;
+}
+.ShortSortList-mobile-icon-Up {
+  width: 12px;
+  height: 12px;
+}
+.ShortSortList-mobile-icon-Down {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 479px) {
+  .ShortSortList {
+    font-size: 15px;
+  }
+  .ShortSortList-box {
+    padding: 10px 3px 10px 2px;
+    width: 30px;
+    border: none;
+  }
+
+  .ShortSortList-icon {
+    width: 15px;
+    height: 15px;
+  }
+  .ShortSortList-title {
+    display: none;
+  }
+  .ShortSortList-panel {
+    width: 125%;
+    left: 0%;
+  }
+}

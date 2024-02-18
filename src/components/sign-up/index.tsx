@@ -37,19 +37,19 @@ function SignUp({ status }: SignUpProps) {
         onChange={(e) => setUsername(e.target.value)}
       ></input>
 
-      <div className="Login-pass-box">
+      <div className="SignUp-pass-box">
         <input
-          className="Login-pass"
+          className="SignUp-pass"
           type={openPass ? "text" : "password"}
           placeholder="Пароль"
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <div className="Login-path-icon-box">
+        <div className="SignUp-path-icon-box">
           {openPass ? (
             <IoEyeOff onClick={() => setOpenPass(false)} />
           ) : (
             <IoEye
-              className="Login-path-open"
+              className="SignUp-path-open"
               onClick={() => setOpenPass(true)}
             />
           )}

@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactComponentElement, ReactNode, useEffect, useState } from "react";
 import "./style.css";
 import { ShortLinkInfo } from "../../types";
 import { DataLinksInfo } from "../../types";
@@ -6,17 +6,11 @@ import { DataLinksInfo } from "../../types";
 interface TableProps {
   children: ReactNode;
   links: DataLinksInfo;
+  pagination: () => ReactNode;
 }
 
-function Table({ children, links }: TableProps) {
+function Table({ children, links, pagination }: TableProps) {
   const [listLinks, setListLinks] = useState<ShortLinkInfo[]>([]);
-
-  interface LinkInfo {
-    short: string;
-    base: string;
-    count: number;
-  }
-  type Sorted = LinkInfo[];
 
   useEffect(() => {
     setListLinks(links.list);
@@ -30,16 +24,21 @@ function Table({ children, links }: TableProps) {
           <li className="Table-panel-rows-title">Исходная ссылка</li>
           <li className="Table-panel-rows-title count">Переходы</li>
         </ul>
-        {listLinks.length > 0 &&
-          listLinks.map((item) => {
-            return (
-              <ul className="Table-panel-rows" key={item.id}>
-                <li className="Table-panel-rows-item short">{item.short}</li>
-                <li className="Table-panel-rows-item">{item.target}</li>
-                <li className="Table-panel-rows-item count">{item.counter}</li>
-              </ul>
-            );
-          })}
+        <div className="Table-panel-rows-box">
+          {listLinks.length > 0 &&
+            listLinks.map((item) => {
+              return (
+                <ul className="Table-panel-rows" key={item.id}>
+                  <li className="Table-panel-rows-item short">{item.short}</li>
+                  <li className="Table-panel-rows-item">{item.target}</li>
+                  <li className="Table-panel-rows-item count">
+                    {item.counter}
+                  </li>
+                </ul>
+              );
+            })}
+        </div>
+        {/* <div className="Table-panel-pagination-mob">{pagination()}</div> */}
       </div>
     </div>
   );

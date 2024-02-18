@@ -21,7 +21,9 @@ function Pagination({
   limit,
 }: PaginationProps) {
   const [offset, setOffset] = useState(0);
-  const [totalPage, setTotalPage] = useState(1);
+  const [lastPage, setLastPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pages, setPages] = useState<number[]>([]);
 
   useEffect(() => {
     if (totalCount) {
@@ -34,35 +36,54 @@ function Pagination({
     if (totalCount) {
       handlePage(limit, totalCount);
     }
-  }, [totalCount]);
+  }, [totalCount, limit]);
 
   function handlePage(limit: number, totalCount: string | null) {
     if (Number(totalCount)) {
       const count = Number(totalCount);
       const result = Math.ceil(count / limit);
 
-      setTotalPage(result);
+      setLastPage(result);
     }
   }
 
-  const handleOffsetPlus = () => {
-    sendId(id);
+  useEffect(() => {
+    console.log("lastPage", lastPage);
+    const count = Number(totalCount);
+    console.log("count", count);
+    if (count) {
+      const items: number[] = [];
+      const indent = 1;
 
-    if (offset + 1 < totalPage) {
-      setOffset((state) => state + 1);
-    }
-  };
+      console.log("count, lastPage", count, lastPage);
 
-  const handleOffsetMinus = () => {
-    sendId(id);
-    if (offset > 0) {
-      setOffset((state) => state - 1);
+      let left = Math.max(currentPage - indent, 1);
+      let right = Math.min(left + indent * 2, lastPage);
+
+      left = Math.max(right - indent * 2, 1);
+
+      console.log("left, right", left, right);
+
+      if (left > 1) items.push(1);
+
+      for (let i = left; i <= right; i++) {
+        items.push(i);
+      }
+
+      if (right < lastPage) items.push(lastPage);
+
+      setPages(items);
     }
+  }, [currentPage, totalCount, lastPage]);
+
+  const handleOffset = (page: number) => {
+    setOffset(page - 1);
+    setCurrentPage(page);
   };
 
   return (
     <div className="Pagination">
-      <button
+      {/* <button
         className="Pagination-item-one"
         onClick={() => handleOffsetMinus()}
       >
@@ -74,7 +95,21 @@ function Pagination({
         onClick={() => handleOffsetPlus()}
       >
         <SlArrowRight />
-      </button>
+      </button> */}
+
+      <ul className="Pagination-list">
+        {pages.length !== 0 &&
+          pages.map((item) => {
+            return (
+              <li
+                className={currentPage === item ? "Pagination-item-focus" : ""}
+                onClick={() => handleOffset(item)}
+              >
+                {item}
+              </li>
+            );
+          })}
+      </ul>
     </div>
   );
 }

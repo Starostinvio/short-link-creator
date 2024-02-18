@@ -37,11 +37,13 @@ input:focus {
   font-size: 15px;
 }
 
-.Login-pass-box {
+.SignUp-pass-box {
   position: relative;
   margin-bottom: 20px;
+
+  z-index: 1;
 }
-.Login-pass {
+.SignUp-pass {
   width: 320px;
   height: 56px;
   outline: none;
@@ -54,24 +56,30 @@ input:focus {
   font-size: 15px;
 }
 
-.Login-path-icon-box {
+.SignUp-path-icon-box {
   position: absolute;
   background: inherit;
-  height: 100%;
-  width: 15%;
+  /* height: 100%;
+  width: 15%; */
   color: rgb(116, 116, 116);
-  top: 0;
-  right: 0;
+  /* top: 0;
+  right: 0; */
+  top: 2px;
+  right: 2px;
+  width: calc(10% - 2px);
+  height: calc(100% - 4px);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   cursor: pointer;
 }
-.Login-path-icon-box:hover {
+
+.SignUp-path-icon-box:hover {
   color: black;
 }
-.Login-pass-open {
+.SignUp-pass-open {
   padding: 4px;
 }
 
@@ -114,5 +122,40 @@ input:focus {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 479px) {
+  .SignUp-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+  }
+
+  .SignUp-title {
+    align-self: flex-start;
+  }
+
+  .SignUp-subtitle {
+    align-self: flex-start;
+  }
+
+  input::placeholder {
+  }
+
+  input:focus {
+  }
+
+  .SignUp-name {
+    width: 100%;
+  }
+  .SignUp-pass-box {
+    width: 100%;
+  }
+  .SignUp-pass {
+    width: 100%;
+  }
+  .SignUp-submit {
+    width: 100%;
   }
 }

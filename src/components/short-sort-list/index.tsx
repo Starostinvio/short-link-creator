@@ -1,5 +1,4 @@
 import "./style.css";
-
 import { useState, useRef, memo, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -52,23 +51,25 @@ function ShortSortList({
   }, [currentId]);
 
   return (
-    <div className="ShortSortList">
-      <div>{title}</div>
-      <div
-        className={open ? "ShortSortList-box active" : "ShortSortList-box"}
-        onClick={() => handleOpenList()}
-      >
-        {mainTitle}
-        <IoIosArrowDown className="ShortSortList-icon" />
-        {open && (
-          <ul className="ShortSortList-panel">
-            {headlinesRef.current.map((item) => {
-              return <li onClick={(e) => handleSelectTitle(item)}>{item}</li>;
-            })}
-          </ul>
-        )}
+    <>
+      <div className="ShortSortList">
+        <div className="ShortSortList-title">{title}</div>
+        <div
+          className={open ? "ShortSortList-box active" : "ShortSortList-box"}
+          onClick={() => handleOpenList()}
+        >
+          {mainTitle}
+          <IoIosArrowDown className="ShortSortList-icon" />
+          {open && (
+            <ul className="ShortSortList-panel">
+              {headlinesRef.current.map((item) => {
+                return <li onClick={(e) => handleSelectTitle(item)}>{item}</li>;
+              })}
+            </ul>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -41,7 +41,6 @@ function UserInfo({ user }: UserInfoProps) {
             </div>
           </div>
         )}
-        {/* </div> */}
       </div>
     </>
   );

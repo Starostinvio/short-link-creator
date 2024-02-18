@@ -1,13 +1,14 @@
 import { useAppDispatch } from "../../store/redux-hook";
 import { getShortLink } from "../../store/short-link/short-link-actions";
 import "./style.css";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 interface GetShortLinkProps {
   token: string;
+  children?: ReactNode;
 }
 
-function GetShortLink({ token }: GetShortLinkProps) {
+function GetShortLink({ token, children }: GetShortLinkProps) {
   const [url, setUrl] = useState("");
 
   const dispatch = useAppDispatch();
@@ -34,6 +35,7 @@ function GetShortLink({ token }: GetShortLinkProps) {
       >
         Сократить
       </button>
+      <div className="GetShortLink-shortLink">{children}</div>
     </div>
   );
 }

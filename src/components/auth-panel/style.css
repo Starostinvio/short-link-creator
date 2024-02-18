@@ -5,13 +5,16 @@
   margin-right: 10px;
 }
 .AuthPanel-login {
-  padding: 15px 35px;
+  padding: 0px 35px;
+  height: 100%;
   border-radius: 10px;
   background: white;
   cursor: pointer;
 
   transition-property: color background-color;
   transition-duration: 136ms;
+
+  font-family: "Roboto";
 }
 
 .AuthPanel-login:hover {
@@ -19,10 +22,13 @@
 }
 
 .AuthPanel-login-active {
-  padding: 15px 35px;
+  padding: 0px 35px;
+  height: 100%;
   border-radius: 10px;
   background-color: black;
   color: white;
+
+  font-family: "Roboto";
   cursor: pointer;
 
   transition-property: color background-color;
@@ -30,11 +36,13 @@
 }
 
 .AuthPanel-signUp {
-  padding: 15px 60px;
+  padding: 0px 60px;
+  height: 100%;
   background: white;
   color: black;
   border-radius: 10px;
 
+  font-family: "Roboto";
   cursor: pointer;
 
   transition-property: color background-color;
@@ -45,7 +53,8 @@
 }
 
 .AuthPanel-signUp-active {
-  padding: 15px 60px;
+  padding: 0px 60px;
+  height: 100%;
   background: black;
   color: white;
   border-radius: 10px;
@@ -54,4 +63,60 @@
 
   transition-property: color background-color;
   transition-duration: 136ms;
+}
+
+@media (max-width: 992px) {
+  .AuthPanel-login {
+    padding: 0px 35px;
+  }
+  .AuthPanel-signUp {
+    padding: 0px 60px;
+  }
+  .AuthPanel-login-active {
+    padding: 0px 35px;
+  }
+  .AuthPanel-login-active {
+    padding: 0px 35px;
+  }
+}
+
+@media (max-width: 479px) {
+  .AuthPanel {
+    display: grid;
+    grid-template-columns: 32% 1fr;
+    align-items: center;
+    grid-gap: 12px;
+    min-height: 100%;
+
+    flex-grow: 1;
+    padding: 0px 10px;
+    margin-right: 10px;
+  }
+  .AuthPanel-login {
+    align-self: start;
+    height: auto;
+    padding: 6px 5px;
+
+    background: inherit;
+  }
+  .AuthPanel-signUp {
+    align-self: start;
+    height: auto;
+    padding: 6px 5px;
+
+    background: inherit;
+  }
+  .AuthPanel-login-active {
+    align-self: end;
+    height: auto;
+    padding: 6px 5px;
+  }
+  .AuthPanel-signUp-active {
+    align-self: end;
+    height: auto;
+    padding: 6px 5px;
+  }
+}
+
+@media (max-width: 350px) {
 }

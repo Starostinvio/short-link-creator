@@ -61,3 +61,20 @@
   transform: scale(0.9);
   transition: opacity 500ms, transform 500ms;
 }
+
+@media (max-width: 479px) {
+  .AccessControl-panel {
+    top: 88px;
+    right: 100px;
+  }
+}
+
+@media (max-width: 350px) {
+  .AccessControl-panel {
+    right: 50px;
+    width: 240px;
+    height: 120px;
+
+    font-size: 12px;
+  }
+}

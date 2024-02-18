@@ -15,31 +15,34 @@ export const getSortList = createAsyncThunk<DataLinksInfo, GetSortListSlice>(
     const endpointDefault = `offset=${offset}&limit=${limit}`;
     const endpointSort = `order=${order}&offset=${offset}&limit=${limit}`;
     try {
-      const response = await fetch(
-        `https://front-test.hex.team/api/statistics?${
-          order ? endpointSort : endpointDefault
-        }`,
-        {
-          method: "GET",
-          headers: {
-            accept: "application/json",
-            Authorization: `Bearer ${token}`,
-          },
+      if (token) {
+        const response = await fetch(
+          `https://front-test.hex.team/api/statistics?${
+            order ? endpointSort : endpointDefault
+          }`,
+          {
+            method: "GET",
+            headers: {
+              accept: "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error();
         }
-      );
 
-      if (!response.ok) {
-        throw new Error();
+        const data: DataLinksInfo = {
+          list: [],
+          totalCount: null,
+        };
+
+        data.list = (await response.json()) as ShortLinkInfo[];
+        data.totalCount = response.headers.get("X-Total-Count");
+        return data;
       }
-
-      const data: DataLinksInfo = {
-        list: [],
-        totalCount: null,
-      };
-
-      data.list = (await response.json()) as ShortLinkInfo[];
-      data.totalCount = response.headers.get("X-Total-Count");
-      return data;
+      return rejectWithValue("Token is undefined");
     } catch (e) {
       if (e instanceof Error) {
         return rejectWithValue(e.message);

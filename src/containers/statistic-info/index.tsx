@@ -15,12 +15,6 @@ type SortReducer = {
   order: string;
 };
 
-type SortReducerAction =
-  | { type: "LIMIT"; payload: number }
-  | { type: "OFFSET"; payload: number }
-  | { type: "COLUMN"; payload: string }
-  | { type: "ORDER"; payload: string };
-
 type StatisticInfoProps = {
   token: string;
   links: DataLinksInfo;
@@ -29,19 +23,23 @@ type StatisticInfoProps = {
 const initialState: SortReducer = {
   limit: 5,
   offset: 0,
-  column: "По умолчанию",
-  order: "По умолчанию",
+  column: "",
+  order: "",
 };
 
-const headlines1 = [
-  "По умолчанию",
-  "По короткой ссылке",
-  "По исходной ссылке",
-  "По переходам",
-];
+const headlines1 = {
+  default: "По умолчанию",
+  short: "По короткой ссылке",
+  target: "По исходной ссылке",
+  counter: "По переходам",
+};
+const headlines2 = {
+  default: "По умолчанию",
+  desc_: "По убыванию",
+  asc_: "По возрастанию",
+};
 
-const headlines2 = ["По умолчанию", "По убыванию", "По возрастанию"];
-const headlines3 = [1, 2, 3, 4, 5];
+const headlines3 = [3, 5, 7];
 
 function handlerSort(state: SortReducer, action: any) {
   switch (action.type) {
@@ -65,82 +63,90 @@ function handlerSort(state: SortReducer, action: any) {
 function StatisticInfo({ token, links }: StatisticInfoProps) {
   const [currentId, setCurrentId] = useState(0);
   const [state, dispatch] = useReducer(handlerSort, initialState);
+
   const storeDispatch = useAppDispatch();
 
   useEffect(() => {
-    let order;
-    if (state.order === "По умолчанию") {
-      order = "";
-    } else if (state.order === "По убыванию") {
-      order = "desc_";
-    } else if (state.order === "По возрастанию") {
-      order = "asc_";
-    }
-    let column;
-    if (state.column === "По умолчанию") {
-      column = "";
-    } else if (state.column === "По короткой ссылке") {
-      column = "short";
-    } else if (state.column === "По исходной ссылке") {
-      column = "target";
-    } else if (state.column === "По переходам") {
-      column = "counter";
-    }
-
-    let resultOrder;
-    if (column !== "" && order === "") {
-      resultOrder = "desc_" + column;
-    } else if (column === "" && order !== "") {
-      resultOrder = order + "counter";
-    } else if (order && column) {
-      resultOrder = order + column;
-    } else {
-      resultOrder = "";
-    }
-
-    const data = {
-      limit: state.limit,
-      offset: state.offset * state.limit,
-      order: resultOrder,
-      token: token,
-    };
-
     if (token) {
+      let resultOrder;
+      if (state.column !== "" && state.order === "") {
+        resultOrder = "desc_" + state.column;
+      } else if (state.column === "" && state.order !== "") {
+        resultOrder = state.order + "counter";
+      } else if (state.order && state.column) {
+        resultOrder = state.order + state.column;
+      } else {
+        resultOrder = "";
+      }
+
+      const data = {
+        limit: state.limit,
+        offset: state.offset * state.limit,
+        order: resultOrder,
+        token: token,
+      };
+
       storeDispatch(getSortList(data));
     }
-  }, [state]);
+  }, [state, token, storeDispatch]);
 
+  useEffect(() => {});
   const handleCurrentId = useCallback((id: number) => {
     setCurrentId(id);
   }, []);
 
+  const callbacks = {
+    pagination: () => {
+      return (
+        <Pagination
+          sendId={handleCurrentId}
+          currentId={currentId}
+          id={3}
+          dispatch={dispatch}
+          totalCount={links.totalCount}
+          limit={state.limit}
+        />
+      );
+    },
+  };
+
   return (
-    <Table links={links}>
-      <LongSortList
-        headlines={headlines1}
-        defaultTitle="По умолчанию"
+    <div className="Statistic-info">
+      <Table links={links} pagination={callbacks.pagination}>
+        <LongSortList
+          headlines={headlines1}
+          defaultTitle={headlines1.default}
+          sendId={handleCurrentId}
+          currentId={currentId}
+          id={0}
+          dispatch={dispatch}
+        />
+        <LongSortList
+          headlines={headlines2}
+          defaultTitle={headlines2.default}
+          sendId={handleCurrentId}
+          currentId={currentId}
+          id={1}
+          dispatch={dispatch}
+        />
+        <ShortSortList
+          headlines={headlines3}
+          defaultTitle={initialState.limit}
+          sendId={handleCurrentId}
+          currentId={currentId}
+          id={2}
+          title="Показать на странице"
+          dispatch={dispatch}
+        />
+        {/* <Pagination
         sendId={handleCurrentId}
         currentId={currentId}
-        id={0}
+        id={3}
         dispatch={dispatch}
-      />
-      <LongSortList
-        headlines={headlines2}
-        defaultTitle="По умолчанию"
-        sendId={handleCurrentId}
-        currentId={currentId}
-        id={1}
-        dispatch={dispatch}
-      />
-      <ShortSortList
-        headlines={headlines3}
-        defaultTitle={initialState.limit}
-        sendId={handleCurrentId}
-        currentId={currentId}
-        id={2}
-        title="Показать на странице"
-        dispatch={dispatch}
-      />
+        totalCount={links.totalCount}
+        limit={state.limit}
+      /> */}
+      </Table>
       <Pagination
         sendId={handleCurrentId}
         currentId={currentId}
@@ -149,7 +155,7 @@ function StatisticInfo({ token, links }: StatisticInfoProps) {
         totalCount={links.totalCount}
         limit={state.limit}
       />
-    </Table>
+    </div>
   );
 }
 

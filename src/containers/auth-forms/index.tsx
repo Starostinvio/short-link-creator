@@ -14,8 +14,11 @@ function AuthForms({ children, page }: PageProps) {
   return (
     <>
       <div className="AuthForms">
-        <div className="AuthForms-img-panel">
-          <img className="AuthForms-img" src={picture}></img>
+        <div className="AuthForms-title-box">
+          <span className="AuthForms-title ">CREATE</span>
+          <span className="AuthForms-subtitle">
+            your own magic <span>link</span>
+          </span>
         </div>
 
         <SwitchTransition>

@@ -14,7 +14,6 @@ function Auth() {
   const [authExists, setAuthExists] = useState<boolean | null>(null);
   const location = useLocation();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const state = useSelector(asyncSessionSelector);
 
   useEffect(() => {
