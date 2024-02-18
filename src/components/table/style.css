@@ -78,7 +78,7 @@
   .Table-panel {
     width: 100%;
     border: none;
-    padding: 0 15px;
+    padding: 0 10px;
     overflow: scroll;
     min-height: 100%;
   }
@@ -98,13 +98,14 @@
 
   .Table-panel-caption {
     grid-template-columns: 20% 64% 16%;
-    padding: 13px 0px;
+    padding: 13px 10px;
     border: none;
   }
   .Table-panel-rows-title {
   }
   .Table-panel-rows-box {
     flex: 1;
+    padding: 0 10px;
   }
   .Table-panel-rows {
     padding: 25px 0px;

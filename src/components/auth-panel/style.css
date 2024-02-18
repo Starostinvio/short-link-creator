@@ -92,7 +92,7 @@
     padding: 0px 10px;
     margin-right: 10px;
   }
-  .AuthPanel-login {
+  /* .AuthPanel-login {
     align-self: start;
     height: auto;
     padding: 6px 5px;
@@ -113,6 +113,30 @@
   }
   .AuthPanel-signUp-active {
     align-self: end;
+    height: auto;
+    padding: 6px 5px;
+  } */
+  .AuthPanel-login {
+    align-self: center;
+    height: auto;
+    padding: 6px 5px;
+
+    background: inherit;
+  }
+  .AuthPanel-signUp {
+    align-self: center;
+    height: auto;
+    padding: 6px 5px;
+
+    background: inherit;
+  }
+  .AuthPanel-login-active {
+    align-self: center;
+    height: auto;
+    padding: 6px 5px;
+  }
+  .AuthPanel-signUp-active {
+    align-self: center;
     height: auto;
     padding: 6px 5px;
   }
