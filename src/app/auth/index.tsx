@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import HeadPanel from "../../components/head-panel";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncSessionSelector } from "../../store/auth/async-auth-selector";
+import TestEnter from "../../components/test-enter";
 
 function Auth() {
   const [currentPage, setCurrentPage] = useState<"login" | "signUp" | "">("");
@@ -47,10 +48,11 @@ function Auth() {
           </HeadPanel>
           <AuthForms page={currentPage}>
             {currentPage === "login" && (
-              <Login
-                status={state.authReducer.status}
-                errorMessage={state.authReducer.error}
-              />
+              // <Login
+              //   status={state.authReducer.status}
+              //   errorMessage={state.authReducer.error}
+              // />
+              <TestEnter />
             )}
             {currentPage === "signUp" && (
               <SignUp status={state.authReducer.status} />
