@@ -68,7 +68,8 @@
 }
 
 .AuthForms-subtitle span {
-  color: rgb(26, 150, 252);
+  /* color: rgb(26, 150, 252); */
+  color: rgb(16, 177, 234);
   font-weight: 400;
 
   cursor: default;

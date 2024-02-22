@@ -94,7 +94,8 @@ input:focus {
   position: relative;
 
   border-radius: 21px;
-  background-color: rgb(26, 150, 252);
+  /* background-color: rgb(26, 150, 252); */
+  background-color: rgb(16, 177, 234);
   color: white;
   font-weight: 500px;
   font-family: "Roboto";
