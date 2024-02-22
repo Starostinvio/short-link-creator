@@ -14,6 +14,7 @@
   transition-property: color background-color;
   transition-duration: 136ms;
 
+  color: black;
   font-family: "Roboto";
 }
 
