@@ -39,6 +39,7 @@
 .AuthPanel-signUp {
   padding: 0px 60px;
   height: 100%;
+  max-width: 225px;
   background: white;
   color: black;
   border-radius: 10px;
