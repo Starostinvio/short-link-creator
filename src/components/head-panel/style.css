@@ -12,9 +12,7 @@
   display: flex;
 
   justify-content: end;
-
   align-self: center;
-
   border-bottom: 1px solid rgb(232, 233, 236);
 }
 
@@ -63,7 +61,7 @@
     padding: 14px 10px;
 
     border-bottom: none;
-    /* background-color: rgb(248, 250, 252); */
+    box-shadow: 0px 1px 15px rgb(235, 235, 235);
     background-color: white;
   }
   .HeadPanel-logo-box {
