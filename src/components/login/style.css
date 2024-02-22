@@ -94,12 +94,8 @@ input:focus {
   position: relative;
 
   border-radius: 21px;
-  /* background-color: rgb(26, 150, 252); */
-  background-image: linear-gradient(
-    45deg,
-    rgb(0, 193, 238) 50%,
-    rgb(48, 127, 201)
-  );
+  background-color: rgb(26, 150, 252);
+
   color: white;
   font-weight: 500px;
   font-family: "Roboto";
@@ -144,13 +140,15 @@ input:focus {
     flex-direction: column;
     padding: 0px 10px;
 
-    /* padding: 20px 20px;
-    
-    background: rgb(242, 243, 247);
+    padding: 20px 20px;
+
+    background: rgb(248, 248, 248);
     border-radius: 10px;
-   
-    box-shadow: 10px 10px 10px rgb(232, 236, 241),
-      -10px -10px 10px rgb(249, 250, 252); */
+
+    /* box-shadow: 14px 14px 13px rgb(232, 236, 241),
+      -14px -14px 13px rgb(249, 250, 252); */
+    box-shadow: 14px 14px 13px rgb(238, 238, 238),
+      -14px -14px 13px rgb(255, 255, 255);
   }
 
   .Login-title {
