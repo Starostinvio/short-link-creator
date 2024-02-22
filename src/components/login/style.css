@@ -162,15 +162,20 @@ input:focus {
 
   .Login-name {
     width: 100%;
+    font-size: 18px;
   }
   .Login-pass-box {
     width: 100%;
   }
   .Login-pass {
     width: 100%;
+    font-size: 18px;
   }
   .Login-submit {
     width: 100%;
+  }
+  input::placeholder {
+    font-size: 18px;
   }
 }
 
