@@ -5,6 +5,7 @@ import { useAppDispatch } from "../../store/redux-hook";
 import { Status } from "../../types";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
+import { IoIosArrowForward } from "react-icons/io";
 
 type LoginProps = {
   status: Status;
@@ -28,7 +29,7 @@ function Login({ status, errorMessage }: LoginProps) {
   return (
     <form className="Login-form">
       <div className="Login-title">Вход в профиль</div>
-      <div className="Login-subtitle">Введите cвои данные ниже</div>
+      <div className="Login-subtitle">Введите Ваши данные ниже</div>
 
       <input
         className="Login-name"
@@ -54,13 +55,21 @@ function Login({ status, errorMessage }: LoginProps) {
           )}
         </div>
       </div>
+      {/* <button
+        className="Login-submit"
+        type="submit"
+        onClick={(e) => handleSubmit(e)}
+      >
+        {status === "loading" ? <div className="loader"></div> : ""}
+        Войти <IoIosArrowForward className="Login-submit-icon" />
+      </button> */}
       <button
         className="Login-submit"
         type="submit"
         onClick={(e) => handleSubmit(e)}
       >
         {status === "loading" ? <div className="loader"></div> : ""}
-        ВОЙТИ
+        <div>Войти</div> <IoIosArrowForward className="Login-submit-icon" />
       </button>
     </form>
   );

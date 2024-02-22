@@ -4,27 +4,16 @@
   flex-direction: column;
 }
 .TestEnter-title-box {
-  /* align-self: center; */
   margin-left: 15px;
   margin-bottom: 25px;
 }
 
 .TestEnter-title {
-  /* padding: 15px 15px;
-  padding-right: 45px;
-  padding-left: 20px; */
-
+  margin-bottom: 10px;
   font-size: 30px;
   font-weight: 600;
 
-  /* color: rgb(31, 31, 44); */
   color: black;
-
-  /* background: rgb(241, 241, 241);
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px; */
-
-  margin-bottom: 10px;
 }
 
 .TestEnter-subtitle {
@@ -34,7 +23,6 @@
 }
 
 .TestEnter-name {
-  /* align-self: center; */
   margin-left: 20px;
   margin-bottom: 15px;
 
@@ -44,8 +32,6 @@
   border: 1px solid rgb(230, 230, 230);
 
   outline: none;
-
-  /* background: rgb(245, 245, 245); */
 }
 
 .TestEnter-name:focus {
