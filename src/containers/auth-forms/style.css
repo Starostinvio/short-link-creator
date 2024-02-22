@@ -197,8 +197,8 @@
     width: 100%;
     margin: 0;
 
-    box-shadow: 2px 2px 3px rgb(236, 236, 236);
-    border-radius: 20px;
+    /* box-shadow: 2px 2px 3px rgb(236, 236, 236);
+    border-radius: 20px; */
 
     /* margin-bottom: 20%; */
   }
