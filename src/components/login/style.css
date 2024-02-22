@@ -150,13 +150,14 @@ input:focus {
 
   .Login-subtitle {
     align-self: flex-start;
+    font-size: 13px;
   }
 
   .Login-name {
     width: 100%;
     font-size: 18px;
 
-    background-color: inherit;
+    /* background-color: inherit; */
     margin-left: 5px;
     border: 1px solid rgb(236, 237, 240);
   }
@@ -169,7 +170,7 @@ input:focus {
     margin-left: 5px;
     margin-bottom: 0;
 
-    background-color: inherit;
+    /* background-color: inherit; */
     border: 1px solid rgb(236, 237, 240);
     font-size: 18px;
   }
