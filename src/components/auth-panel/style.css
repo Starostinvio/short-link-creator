@@ -92,53 +92,44 @@
     padding: 0px 10px;
     margin-right: 10px;
   }
-  /* .AuthPanel-login {
-    align-self: start;
-    height: auto;
-    padding: 6px 5px;
 
-    background: inherit;
-  }
-  .AuthPanel-signUp {
-    align-self: start;
-    height: auto;
-    padding: 6px 5px;
-
-    background: inherit;
-  }
-  .AuthPanel-login-active {
-    align-self: end;
-    height: auto;
-    padding: 6px 5px;
-  }
-  .AuthPanel-signUp-active {
-    align-self: end;
-    height: auto;
-    padding: 6px 5px;
-  } */
   .AuthPanel-login {
     align-self: center;
     height: auto;
-    padding: 6px 5px;
+    max-width: 65px;
+    padding: 10px 5px;
 
+    border-radius: 16px;
     background: inherit;
+    font-size: 16px;
   }
   .AuthPanel-signUp {
     align-self: center;
     height: auto;
-    padding: 6px 5px;
+    max-width: 150px;
+    padding: 10px 5px;
 
+    border-radius: 16px;
     background: inherit;
+    font-size: 16px;
   }
   .AuthPanel-login-active {
     align-self: center;
+    max-width: 65px;
     height: auto;
-    padding: 6px 5px;
+    padding: 10px 10px;
+
+    border-radius: 16px;
+    font-size: 16px;
   }
   .AuthPanel-signUp-active {
     align-self: center;
     height: auto;
-    padding: 6px 5px;
+    max-width: 150px;
+    padding: 10px 5px;
+
+    border-radius: 16px;
+    font-size: 16px;
   }
 }
 

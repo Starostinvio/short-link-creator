@@ -59,11 +59,7 @@ input:focus {
 .SignUp-path-icon-box {
   position: absolute;
   background: inherit;
-  /* height: 100%;
-  width: 15%; */
   color: rgb(116, 116, 116);
-  /* top: 0;
-  right: 0; */
   top: 2px;
   right: 2px;
   width: calc(10% - 2px);
