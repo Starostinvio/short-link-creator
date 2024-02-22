@@ -147,9 +147,8 @@ input:focus {
 
     /* box-shadow: 14px 14px 13px rgb(232, 236, 241),
       -14px -14px 13px rgb(249, 250, 252); */
-    box-shadow: 18px 18px 13px rgb(238, 238, 238),
-      -18px -18px 13px rgb(255, 255, 255),
-      inset -1px -1px 3px rgb(240, 240, 240),
+    box-shadow: 10px 10px 8px rgb(230, 230, 230),
+      -10px -10px 6px rgb(255, 255, 255), inset -1px -1px 3px rgb(240, 240, 240),
       inset 1px 1px 3px rgb(255, 255, 255);
   }
 
