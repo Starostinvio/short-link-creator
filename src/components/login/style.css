@@ -154,6 +154,7 @@ input:focus {
 
   .Login-title {
     align-self: flex-start;
+    font-size: 32px;
   }
 
   .Login-subtitle {
@@ -174,8 +175,11 @@ input:focus {
   .Login-submit {
     width: 100%;
   }
-  input::placeholder {
-    font-size: 18px;
+  .Login-name::placeholder {
+    font-size: 16px;
+  }
+  .Login-pass::placeholder {
+    font-size: 16px;
   }
 }
 
