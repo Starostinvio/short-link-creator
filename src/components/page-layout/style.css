@@ -1,6 +1,6 @@
 .PageLayout {
   /* background: rgb(248, 250, 252); */
-  background: rgb(221, 243, 253);
+  background: rgb(248, 248, 248);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
