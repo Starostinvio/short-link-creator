@@ -29,6 +29,7 @@ function Login({ status, errorMessage }: LoginProps) {
     <form className="Login-form">
       <div className="Login-title">Вход в профиль</div>
       <div className="Login-subtitle">Введите cвои данные ниже</div>
+
       <input
         className="Login-name"
         type="text"

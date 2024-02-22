@@ -191,11 +191,16 @@
     top: 13%;
     left: 0;
     right: 0; */
+    flex: 1;
     height: 291px;
     align-self: baseline;
     width: 100%;
     margin: 0;
-    margin-bottom: 20%;
+
+    box-shadow: 2px 2px 3px rgb(236, 236, 236);
+    border-radius: 20px;
+
+    /* margin-bottom: 20%; */
   }
 }
 
