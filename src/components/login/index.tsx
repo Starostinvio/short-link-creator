@@ -55,22 +55,22 @@ function Login({ status, errorMessage }: LoginProps) {
           )}
         </div>
       </div>
-      {/* <button
-        className="Login-submit"
-        type="submit"
-        onClick={(e) => handleSubmit(e)}
-      >
-        {status === "loading" ? <div className="loader"></div> : ""}
-        Войти <IoIosArrowForward className="Login-submit-icon" />
-      </button> */}
       <button
         className="Login-submit"
         type="submit"
         onClick={(e) => handleSubmit(e)}
       >
         {status === "loading" ? <div className="loader"></div> : ""}
-        <div>Войти</div> <IoIosArrowForward className="Login-submit-icon" />
+        Войти
       </button>
+      {/* <button
+        className="Login-submit"
+        type="submit"
+        onClick={(e) => handleSubmit(e)}
+      >
+        {status === "loading" ? <div className="loader"></div> : ""}
+        <div>Войти</div> <IoIosArrowForward className="Login-submit-icon" />
+      </button> */}
     </form>
   );
 }

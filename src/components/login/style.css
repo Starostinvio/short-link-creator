@@ -138,80 +138,30 @@ input:focus {
   .Login-form {
     display: flex;
     flex-direction: column;
-    margin-left: 15px;
+    padding: 0px 10px;
   }
 
   .Login-title {
     align-self: flex-start;
-    margin-bottom: 10px;
-    font-size: 30px;
-    font-weight: 600;
-
-    /* background-image: linear-gradient(
-      90deg,
-      rgb(219, 219, 219) 30%,
-      rgb(26, 150, 252)
-    );
-    padding: 10px;
-    border-top-right-radius: 29px;
-    border-bottom-right-radius: 30px;
-    color: white; */
   }
 
   .Login-subtitle {
     align-self: flex-start;
-    font-size: 13px;
   }
 
   .Login-name {
     width: 100%;
-    font-size: 18px;
-
-    /* background-color: inherit; */
-    margin-left: 5px;
-    border: 2px solid rgb(236, 237, 240);
   }
   .Login-pass-box {
     width: 100%;
-    margin-bottom: 60px;
   }
   .Login-pass {
     width: 100%;
-    margin-left: 5px;
-    margin-bottom: 0;
-
-    /* background-color: inherit; */
-    border: 2px solid rgb(236, 237, 240);
-    font-size: 18px;
   }
   .Login-submit {
-    /* padding: 20px 30px; */
-    padding: 20px 10px 20px 30px;
-    border-radius: 19px;
-    /* box-shadow: 5px 5px 8px rgb(231, 231, 231), -5px -5px 8px rgb(255, 255, 255); */
-    /* background-color: rgb(248, 248, 248); */
-    /* background: rgb(248, 249, 249);
-    font-weight: 500;
-    font-size: 18px;
-    color: rgb(31, 31, 44); */
-    /* box-shadow: 2px 2px 15px rgb(185, 185, 185),
-      -5px -5px 8px rgb(255, 255, 255); */
-    background-color: rgb(26, 150, 252);
-    font-weight: 500;
-    font-size: 18px;
-    color: white;
+    width: 100%;
+  }
 
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .Login-submit-icon {
-    margin-left: 5px;
-    width: 24px;
-    height: 24px;
-    /* color: rgb(26, 150, 252); */
-    color: white;
-  }
   .Login-name::placeholder {
     font-size: 16px;
   }
