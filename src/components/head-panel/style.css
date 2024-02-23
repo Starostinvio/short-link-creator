@@ -60,10 +60,10 @@
     height: 72px;
     padding: 14px 10px;
 
-    /* border-bottom: none;
-    box-shadow: 0px 1px 15px rgb(235, 235, 235); */
-    /* border: none; */
-    /* box-shadow: 0px 1px 15px rgb(238, 238, 238); */
+    border-bottom: none;
+    box-shadow: 0px 1px 15px rgb(235, 235, 235);
+    /* border: none;
+    box-shadow: 0px 1px 15px rgb(238, 238, 238); */
     background-color: white;
   }
   .HeadPanel-logo-box {
