@@ -52,7 +52,6 @@
   opacity: 1;
   transform: translateX(0);
   transition: opacity 500ms, transform 500ms;
-  background-color: rgb(26, 150, 252);
 }
 .alertInfo-exit {
   opacity: 1;
