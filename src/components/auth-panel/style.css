@@ -121,7 +121,7 @@
     height: auto;
     padding: 10px 10px;
 
-    background-color: rgb(26, 150, 252);
+    background-color: black;
     border-radius: 100px;
     font-size: 16px;
   }
@@ -131,7 +131,7 @@
     max-width: 155px;
     padding: 10px 12px;
 
-    background-color: rgb(26, 150, 252);
+    background-color: black;
     border-radius: 100px;
     font-weight: 500;
     font-size: 16px;
