@@ -28,9 +28,10 @@ function Login({ status, errorMessage }: LoginProps) {
 
   return (
     <form className="Login-form">
-      <div className="Login-title">Вход в профиль</div>
-      <div className="Login-subtitle">Введите Ваши данные </div>
-
+      <div className="Login-title-box">
+        <div className="Login-title">Вход в профиль</div>
+        <div className="Login-subtitle">Введите Ваши данные </div>
+      </div>
       <input
         className="Login-name"
         type="text"
