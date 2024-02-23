@@ -142,11 +142,11 @@ input:focus {
   }
 
   .Login-title {
-    align-self: flex-start;
+    align-self: center;
   }
 
   .Login-subtitle {
-    align-self: flex-start;
+    align-self: center;
   }
 
   .Login-name {
@@ -166,7 +166,9 @@ input:focus {
   }
   .Login-submit {
     width: 100%;
+    border-radius: 25px;
     font-weight: 500;
+    padding: 25px 0px;
   }
 
   .Login-name::placeholder {
