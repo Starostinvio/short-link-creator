@@ -138,7 +138,7 @@ input:focus {
   .Login-form {
     display: flex;
     flex-direction: column;
-    padding: 0px 10px;
+    padding: 0px 0px;
   }
 
   .Login-title {
@@ -151,15 +151,22 @@ input:focus {
 
   .Login-name {
     width: 100%;
+    height: 65px;
+
+    background-color: inherit;
   }
   .Login-pass-box {
     width: 100%;
   }
   .Login-pass {
     width: 100%;
+    height: 65px;
+
+    background-color: inherit;
   }
   .Login-submit {
     width: 100%;
+    font-weight: 500;
   }
 
   .Login-name::placeholder {

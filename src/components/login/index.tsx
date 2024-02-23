@@ -61,7 +61,7 @@ function Login({ status, errorMessage }: LoginProps) {
         onClick={(e) => handleSubmit(e)}
       >
         {status === "loading" ? <div className="loader"></div> : ""}
-        Войти
+        ВОЙТИ
       </button>
       {/* <button
         className="Login-submit"
