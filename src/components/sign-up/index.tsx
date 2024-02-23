@@ -29,8 +29,10 @@ function SignUp({ status }: SignUpProps) {
 
   return (
     <form className="SignUp-form">
-      <div className="SignUp-title">Регистрация</div>
-
+      <div className="SignUp-title-box">
+        <div className="SignUp-title">Новый профиль</div>
+        <div className="SignUp-subtitle">Введите данные </div>
+      </div>
       <input
         className="SignUp-name"
         placeholder="Имя"
@@ -44,14 +46,11 @@ function SignUp({ status }: SignUpProps) {
           placeholder="Пароль"
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <div className="SignUp-path-icon-box">
+        <div className="SignUp-pass-icon-box">
           {openPass ? (
             <IoEyeOff onClick={() => setOpenPass(false)} />
           ) : (
-            <IoEye
-              className="SignUp-path-open"
-              onClick={() => setOpenPass(true)}
-            />
+            <IoEye onClick={() => setOpenPass(true)} />
           )}
         </div>
       </div>

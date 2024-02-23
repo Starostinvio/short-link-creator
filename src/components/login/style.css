@@ -149,16 +149,11 @@ input:focus {
       rgba(255, 255, 255, 0.466)
     );
     border-top-right-radius: 45px;
-
-    /* margin-bottom: 15px; */
-    /* border-bottom-right-radius: 50px; */
   }
   .Login-title {
-    /* align-self: center; */
   }
 
   .Login-subtitle {
-    /* align-self: center; */
   }
 
   .Login-name {

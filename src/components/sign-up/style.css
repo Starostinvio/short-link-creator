@@ -56,7 +56,7 @@ input:focus {
   font-size: 15px;
 }
 
-.SignUp-path-icon-box {
+.SignUp-pass-icon-box {
   position: absolute;
   background: inherit;
   color: rgb(116, 116, 116);
@@ -72,7 +72,7 @@ input:focus {
   cursor: pointer;
 }
 
-.SignUp-path-icon-box:hover {
+.SignUp-pass-icon-box:hover {
   color: black;
 }
 .SignUp-pass-open {
@@ -127,13 +127,26 @@ input:focus {
     flex-direction: column;
     padding: 0px 10px;
   }
-
+  .SignUp-title-box {
+    width: 50%;
+    padding: 10px 20px 5px 5px;
+    background-image: linear-gradient(
+      180deg,
+      white 60%,
+      rgba(255, 255, 255, 0.466)
+    );
+    border-top-right-radius: 45px;
+  }
   .SignUp-title {
-    align-self: flex-start;
+    margin-bottom: 10px;
   }
 
   .SignUp-subtitle {
-    align-self: flex-start;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(161, 160, 161);
+
+    margin-bottom: 36px;
   }
 
   input::placeholder {
@@ -144,14 +157,34 @@ input:focus {
 
   .SignUp-name {
     width: 100%;
+    height: 65px;
+    font-size: 18px;
+
+    background-color: inherit;
   }
   .SignUp-pass-box {
     width: 100%;
   }
   .SignUp-pass {
     width: 100%;
+    height: 65px;
+    font-size: 18px;
+
+    background-color: inherit;
+  }
+  .SignUp-pass-icon-box {
+    background: rgb(248, 250, 252);
   }
   .SignUp-submit {
     width: 100%;
+    border-radius: 25px;
+    font-weight: 400;
+    padding: 23px 0px;
+  }
+  .SignUp-name::placeholder {
+    font-size: 16px;
+  }
+  .SignUp-pass::placeholder {
+    font-size: 16px;
   }
 }
