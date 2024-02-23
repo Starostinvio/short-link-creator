@@ -188,12 +188,18 @@ input:focus {
     /* padding: 20px 30px; */
     padding: 20px 10px 20px 30px;
     border-radius: 19px;
-    box-shadow: 5px 5px 8px rgb(231, 231, 231), -5px -5px 8px rgb(255, 255, 255);
+    /* box-shadow: 5px 5px 8px rgb(231, 231, 231), -5px -5px 8px rgb(255, 255, 255); */
     /* background-color: rgb(248, 248, 248); */
-    background: rgb(248, 249, 249);
+    /* background: rgb(248, 249, 249);
     font-weight: 500;
     font-size: 18px;
-    color: rgb(31, 31, 44);
+    color: rgb(31, 31, 44); */
+    box-shadow: 2px 2px 15px rgb(185, 185, 185),
+      -5px -5px 8px rgb(255, 255, 255);
+    background-color: rgb(26, 150, 252);
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
 
     display: flex;
     align-items: center;
@@ -203,7 +209,8 @@ input:focus {
     margin-left: 5px;
     width: 24px;
     height: 24px;
-    color: rgb(26, 150, 252);
+    /* color: rgb(26, 150, 252); */
+    color: white;
   }
   .Login-name::placeholder {
     font-size: 16px;
