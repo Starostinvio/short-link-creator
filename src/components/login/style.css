@@ -169,7 +169,7 @@ input:focus {
 
     /* background-color: inherit; */
     margin-left: 5px;
-    border: 1px solid rgb(236, 237, 240);
+    border: 2px solid rgb(236, 237, 240);
   }
   .Login-pass-box {
     width: 100%;
@@ -181,7 +181,7 @@ input:focus {
     margin-bottom: 0;
 
     /* background-color: inherit; */
-    border: 1px solid rgb(236, 237, 240);
+    border: 2px solid rgb(236, 237, 240);
     font-size: 18px;
   }
   .Login-submit {
@@ -194,8 +194,8 @@ input:focus {
     font-weight: 500;
     font-size: 18px;
     color: rgb(31, 31, 44); */
-    box-shadow: 2px 2px 15px rgb(185, 185, 185),
-      -5px -5px 8px rgb(255, 255, 255);
+    /* box-shadow: 2px 2px 15px rgb(185, 185, 185),
+      -5px -5px 8px rgb(255, 255, 255); */
     background-color: rgb(26, 150, 252);
     font-weight: 500;
     font-size: 18px;
