@@ -138,14 +138,20 @@ input:focus {
   .Login-form {
     display: flex;
     flex-direction: column;
-    padding: 0px 0px;
+    padding: 0px 10px;
   }
   .Login-title-box {
     width: 50%;
     padding: 10px 20px 5px 5px;
-    background-color: white;
-    border-top-right-radius: 30px;
-    /* border-bottom-right-radius: 15px; */
+    background-image: linear-gradient(
+      180deg,
+      white 60%,
+      rgba(255, 255, 255, 0.466)
+    );
+    border-top-right-radius: 45px;
+
+    /* margin-bottom: 15px; */
+    /* border-bottom-right-radius: 50px; */
   }
   .Login-title {
     /* align-self: center; */
