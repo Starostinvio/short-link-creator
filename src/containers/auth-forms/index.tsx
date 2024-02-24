@@ -1,8 +1,6 @@
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import { useRef, ReactNode } from "react";
-import picture from "../../img/cutUrl.png";
 import "./style.css";
-import TestEnter from "../../components/test-enter";
 
 interface PageProps {
   children: ReactNode;

@@ -34,64 +34,97 @@ const authSlice = createSlice({
         error: undefined,
       };
     },
+    clearError: (state) => {
+      return { ...state, error: undefined, status: "idle" };
+    },
   },
   extraReducers: (builder) => {
     builder
       .addCase(signUp.pending, (state) => {
-        state.status = "loading";
+        return {
+          ...state,
+          status: "loading",
+        };
       })
       .addCase(signUp.fulfilled, (state, action) => {
-        state.user = action.payload;
-        state.status = "received";
-        return state;
+        return {
+          ...state,
+          user: action.payload,
+          status: "received",
+        };
       })
-      .addCase(signUp.rejected, (state) => {
-        state.status = "rejected";
+      .addCase(signUp.rejected, (state, action) => {
+        return {
+          ...state,
+          error: action.payload as string,
+          status: "rejected",
+        };
       })
       .addCase(login.pending, (state) => {
-        state.status = "loading";
+        return {
+          ...state,
+          status: "loading",
+        };
       })
       .addCase(login.fulfilled, (state, action) => {
         console.log("action payload", action.payload);
         if (action.payload.tokenDate.access_token) {
           localStorage.setItem("token", action.payload.tokenDate.access_token);
           localStorage.setItem("username", action.payload.username);
-          state.token = action.payload.tokenDate.access_token;
-          state.user = { username: action.payload.username };
-          state.exists = true;
-          state.status = "received";
-          return state;
+
+          return {
+            ...state,
+            token: action.payload.tokenDate.access_token,
+            user: { username: action.payload.username },
+            exists: true,
+            status: "received",
+          };
         }
-        state.token = null;
-        state.exists = false;
-        state.status = "rejected";
-        return state;
+
+        return {
+          ...state,
+          token: null,
+          exists: false,
+          status: "rejected",
+        };
       })
       .addCase(login.rejected, (state, action) => {
-        state.status = "rejected";
-        state.error = action.error.message;
+        return {
+          ...state,
+          status: "rejected",
+          error: action.payload as string,
+        };
       })
       .addCase(remindSession.pending, (state) => {
-        state.status = "loading";
+        return {
+          ...state,
+          status: "loading",
+        };
       })
       .addCase(remindSession.fulfilled, (state, action) => {
-        state.user = { username: localStorage.getItem("username") };
-        state.token = action.payload;
-        state.exists = true;
-        return;
+        return {
+          ...state,
+          user: { username: localStorage.getItem("username") },
+          token: action.payload,
+          exists: true,
+        };
       })
       .addCase(remindSession.rejected, (state, action) => {
-        state.status = "rejected";
         localStorage.removeItem("token");
         localStorage.removeItem("username");
-        state.user = {};
-        state.token = null;
-        state.exists = false;
-        state.error = action.error.message;
+
+        return {
+          ...state,
+          status: "rejected",
+          user: {},
+          token: null,
+          exists: false,
+          error: action.error.message,
+        };
       });
   },
 });
 
-export const { logOut } = authSlice.actions;
+export const { logOut, clearError } = authSlice.actions;
 
 export default authSlice.reducer;

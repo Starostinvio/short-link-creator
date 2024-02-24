@@ -11,8 +11,6 @@
   font-family: "Roboto";
 }
 
-.GetShortLink-panel {
-}
 .GetShortLink-shortLink {
   grid-column: 1/3;
 }

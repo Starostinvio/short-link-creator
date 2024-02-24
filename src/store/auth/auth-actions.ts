@@ -27,7 +27,7 @@ export const signUp = createAsyncThunk<User, UserDate>(
       );
 
       if (!response.ok) {
-        throw new Error();
+        return rejectWithValue("SignUp error");
       }
       const data = await response.json();
       data.password = password;
@@ -55,7 +55,7 @@ export const login = createAsyncThunk<UserSessionDate, UserDate>(
       });
 
       if (!response.ok) {
-        rejectWithValue("Error");
+        return rejectWithValue("Login error");
       }
       const userSessionDate: UserSessionDate = {
         tokenDate: {
@@ -64,7 +64,9 @@ export const login = createAsyncThunk<UserSessionDate, UserDate>(
         },
         username: "",
       };
+
       userSessionDate.tokenDate = await response.json();
+
       userSessionDate.username = username;
 
       return userSessionDate;

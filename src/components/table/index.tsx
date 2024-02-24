@@ -1,4 +1,4 @@
-import { ReactComponentElement, ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import "./style.css";
 import { ShortLinkInfo } from "../../types";
 import { DataLinksInfo } from "../../types";
@@ -6,10 +6,9 @@ import { DataLinksInfo } from "../../types";
 interface TableProps {
   children: ReactNode;
   links: DataLinksInfo;
-  pagination: () => ReactNode;
 }
 
-function Table({ children, links, pagination }: TableProps) {
+function Table({ children, links }: TableProps) {
   const [listLinks, setListLinks] = useState<ShortLinkInfo[]>([]);
 
   useEffect(() => {
@@ -38,7 +37,6 @@ function Table({ children, links, pagination }: TableProps) {
               );
             })}
         </div>
-        {/* <div className="Table-panel-pagination-mob">{pagination()}</div> */}
       </div>
     </div>
   );

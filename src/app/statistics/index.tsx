@@ -17,13 +17,16 @@ function Statistics() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const handleAuth = (page: "login" | "signUp") => {
-    navigate("/auth", { replace: false, state: page });
+    navigate("/auth", {
+      replace: false,
+      state: { form: page, previousLocation: "/statistic" },
+    });
   };
 
   const state = useSelector(asyncSessionSelector);
 
   useEffect(() => {
-    if (typeof state.authReducer.exists === "boolean") {
+    if (state.authReducer.exists !== null) {
       setAuthExists(state.authReducer.exists);
     }
   }, [state]);
@@ -35,7 +38,7 @@ function Statistics() {
   return (
     <PageLayout>
       <HeadPanel>
-        {typeof authExists === "boolean" &&
+        {authExists !== null &&
           (authExists ? (
             <>
               <Navbar title="Главная" link="/" />
@@ -45,9 +48,7 @@ function Statistics() {
             <AuthPanel authPage={handleAuth} currentPage={"signUp"} />
           ))}
       </HeadPanel>
-      {typeof authExists === "boolean" && !authExists && (
-        <AccessControl exists={false} />
-      )}
+      {authExists !== null && !authExists && <AccessControl exists={false} />}
       <StatisticInfo
         token={state.authReducer.token ? state.authReducer.token : ""}
         links={state.statisticsReducer.links}

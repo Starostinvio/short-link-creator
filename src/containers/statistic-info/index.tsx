@@ -95,24 +95,9 @@ function StatisticInfo({ token, links }: StatisticInfoProps) {
     setCurrentId(id);
   }, []);
 
-  const callbacks = {
-    pagination: () => {
-      return (
-        <Pagination
-          sendId={handleCurrentId}
-          currentId={currentId}
-          id={3}
-          dispatch={dispatch}
-          totalCount={links.totalCount}
-          limit={state.limit}
-        />
-      );
-    },
-  };
-
   return (
     <div className="Statistic-info">
-      <Table links={links} pagination={callbacks.pagination}>
+      <Table links={links}>
         <LongSortList
           headlines={headlines1}
           defaultTitle={headlines1.default}
@@ -138,14 +123,6 @@ function StatisticInfo({ token, links }: StatisticInfoProps) {
           title="Показать на странице"
           dispatch={dispatch}
         />
-        {/* <Pagination
-        sendId={handleCurrentId}
-        currentId={currentId}
-        id={3}
-        dispatch={dispatch}
-        totalCount={links.totalCount}
-        limit={state.limit}
-      /> */}
       </Table>
       <Pagination
         sendId={handleCurrentId}

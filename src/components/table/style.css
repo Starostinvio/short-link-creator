@@ -31,8 +31,6 @@
   color: rgb(172, 172, 176);
   font-weight: 400;
 }
-.Table-panel-rows-title {
-}
 
 .Table-panel-rows {
   display: grid;
@@ -53,8 +51,6 @@
   white-space: nowrap;
   scroll-behavior: smooth;
 }
-.Table-panel-rows-item:focus {
-}
 
 .Table-panel-rows-item::-webkit-scrollbar {
   height: 0px;
@@ -64,16 +60,9 @@
   justify-self: center;
 }
 
-@media (max-width: 992px) {
-}
-
-@media (max-width: 720px) {
-}
-
 @media (max-width: 479px) {
   .Table {
     margin: 0px;
-    /* flex-grow: 1; */
   }
   .Table-panel {
     width: 100%;
@@ -100,8 +89,7 @@
     padding: 13px 10px;
     border: none;
   }
-  .Table-panel-rows-title {
-  }
+
   .Table-panel-rows-box {
     flex: 1;
     padding: 0 10px;

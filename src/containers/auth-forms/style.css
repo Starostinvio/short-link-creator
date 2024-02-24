@@ -36,8 +36,6 @@
   opacity: 0.1;
 }
 
-.AuthForms-panel {
-}
 .AuthForms-title-box {
   display: flex;
   flex-direction: column;
@@ -129,62 +127,24 @@
 @media (max-width: 479px) {
   .AuthForms {
     display: flex;
-    /* flex-direction: column-reverse; */
-
-    padding: 10% 0px;
     justify-content: flex-start;
+    padding: 10% 0px;
   }
 
   .AuthForms-title-box {
-    /* align-self: stretch;
-    position: fixed;
-    top: -100px;
-    right: -70px;
-    z-index: 100; */
-    /* display: none; */
-    /* display: flex; */
-  }
-
-  .AuthForms-title-box {
-    /* display: flex;
-    flex-direction: column; */
     display: none;
     align-self: end;
     margin: 0;
   }
   .AuthForms-title {
-    /* position: relative;
-    z-index: 0;
-
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    color: rgb(0, 0, 0);
-
-    padding-right: 8px;
-    cursor: default; */
-
     font-size: 42px;
   }
 
   .AuthForms-subtitle {
-    /* font-family: "Roboto";
-    font-weight: 300;
-    font-size: 16px;
-    color: rgb(39, 37, 37);
-
-    transform: translateX(0px);
-    margin-left: 115px;
-    cursor: default; */
-
     transform: translateX(0px);
     margin-left: 90px;
 
     font-size: 15px;
-  }
-
-  .AuthForms-subtitle span {
   }
   .AuthForms-panel {
     flex: 1;
@@ -193,7 +153,4 @@
     width: 100%;
     margin: 0;
   }
-}
-
-@media (max-width: 350px) {
 }

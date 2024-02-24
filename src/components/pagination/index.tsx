@@ -83,20 +83,6 @@ function Pagination({
 
   return (
     <div className="Pagination">
-      {/* <button
-        className="Pagination-item-one"
-        onClick={() => handleOffsetMinus()}
-      >
-        <SlArrowLeft />
-      </button>
-      <div className="Pagination-page">{offset + 1}</div>
-      <button
-        className="Pagination-item-two"
-        onClick={() => handleOffsetPlus()}
-      >
-        <SlArrowRight />
-      </button> */}
-
       <ul className="Pagination-list">
         {pages.length !== 0 &&
           pages.map((item) => {

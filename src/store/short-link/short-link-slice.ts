@@ -22,17 +22,24 @@ const shortLinkSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getShortLink.pending, (state, action) => {
-        state.status = "loading";
+        return {
+          ...state,
+          status: "loading",
+        };
       })
       .addCase(getShortLink.fulfilled, (state, action) => {
-        state.status = "received";
-        console.log("short-link-slice action.payload", action.payload);
-        state.shortLink = action.payload;
-        return;
+        return {
+          ...state,
+          status: "received",
+          shortLink: action.payload,
+        };
       })
       .addCase(getShortLink.rejected, (state, action) => {
-        state.status = "rejected";
-        state.error = action.error.message;
+        return {
+          ...state,
+          status: "rejected",
+          error: action.error.message,
+        };
       });
   },
 });

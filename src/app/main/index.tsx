@@ -18,7 +18,10 @@ function Main() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const handleAuth = (page: "login" | "signUp") => {
-    navigate("/auth", { replace: false, state: page });
+    navigate("/auth", {
+      replace: false,
+      state: { form: page, previousLocation: "/" },
+    });
   };
 
   const state = useSelector(asyncSessionSelector);
