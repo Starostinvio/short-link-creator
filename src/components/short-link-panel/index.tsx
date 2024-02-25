@@ -2,6 +2,12 @@ import "./style.css";
 import { ShortLinkInfo } from "../../types";
 import ClipboardJS from "clipboard";
 import { useEffect } from "react";
+import { BsCopy } from "react-icons/bs";
+import { HiMiniArrowUpTray } from "react-icons/hi2";
+import { BsQrCode } from "react-icons/bs";
+import { RiShareForward2Fill } from "react-icons/ri";
+import { RiShareForwardFill } from "react-icons/ri";
+import { IoCopy } from "react-icons/io5";
 
 interface ShortLinkPanelProps {
   shortUrl: ShortLinkInfo;
@@ -43,8 +49,20 @@ function ShortLinkPanel({ shortUrl }: ShortLinkPanelProps) {
   return (
     <div className="ShortLinkPanel">
       <button className="ShortLinkPanel-title" onClick={() => handleClick()}>
-        {`https://front- test.hex.team/s/${shortUrl.short}`}
+        {/* {`https://front- test.hex.team/s/${shortUrl.short}`} */}
+        {`hex.team/s/${shortUrl.short}`}
       </button>
+      <ul className="ShortLinkPanel-icons-list">
+        <li className="ShortLinkPanel-icon-box1">
+          <RiShareForwardFill className="ShortLinkPanel-icon" />
+        </li>
+        <li className="ShortLinkPanel-icon-box2">
+          <IoCopy className="ShortLinkPanel-icon" />
+        </li>
+        <li className="ShortLinkPanel-icon-box3">
+          <BsQrCode className="ShortLinkPanel-icon" />
+        </li>
+      </ul>
     </div>
   );
 }
