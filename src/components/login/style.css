@@ -21,12 +21,12 @@
   color: rgb(161, 160, 161);
 }
 
-input::placeholder {
+.Login-form input::placeholder {
   font-weight: 400;
   color: rgb(173, 173, 173);
 }
 
-input:focus {
+.Login-form input:focus {
   border: 2px solid rgb(26, 150, 252);
 }
 

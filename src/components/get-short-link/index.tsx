@@ -1,7 +1,9 @@
+import "./style.css";
 import { useAppDispatch } from "../../store/redux-hook";
 import { getShortLink } from "../../store/short-link/short-link-actions";
-import "./style.css";
 import { ReactNode, useState } from "react";
+import { CiLink } from "react-icons/ci";
+import { HiOutlineLink } from "react-icons/hi";
 
 interface GetShortLinkProps {
   token: string;
@@ -13,7 +15,6 @@ function GetShortLink({ token, children }: GetShortLinkProps) {
 
   const dispatch = useAppDispatch();
   const handleGetShortLink = () => {
-    console.log("token get-short-link", token);
     if (token) {
       dispatch(getShortLink({ url, token }));
     }
@@ -24,13 +25,28 @@ function GetShortLink({ token, children }: GetShortLinkProps) {
   };
   return (
     <div className="GetShortLink">
-      <input
+      {/* <input
         className="GetShortLink-field"
         onChange={(e) => handleGetUrl(e.target.value)}
-        placeholder="Введите ссылку, которую нужно сократить"
-      ></input>
+        placeholder="Введите ссылку"
+      ></input> */}
+      <div className="GetShortLink-field-box">
+        <input
+          className="GetShortLink-field"
+          onChange={(e) => handleGetUrl(e.target.value)}
+          placeholder="Введите ссылку"
+        ></input>
+        <div className="GetShortLink-shorten-box mobile">
+          <button
+            className="GetShortLink-shorten"
+            onClick={() => handleGetShortLink()}
+          >
+            <HiOutlineLink className="GetShortLink-shorten-icon" />
+          </button>
+        </div>
+      </div>
       <button
-        className="GetShortLink-shorten"
+        className="GetShortLink-shorten desktop"
         onClick={() => handleGetShortLink()}
       >
         Сократить

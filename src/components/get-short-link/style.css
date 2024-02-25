@@ -1,3 +1,6 @@
+.mobile {
+  display: none;
+}
 .GetShortLink {
   height: 100%;
 
@@ -33,6 +36,9 @@
   color: rgb(31, 31, 44);
 }
 
+.GetShortLink-field:focus {
+  border: 2px solid rgb(26, 150, 252);
+}
 .GetShortLink-field::placeholder {
   color: rgb(173, 173, 173);
   font-size: 15px;
@@ -60,31 +66,94 @@
 }
 
 @media (max-width: 479px) {
+  .mobile {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
   .GetShortLink {
     flex-grow: 1;
 
-    grid-template-columns: 1fr;
-    grid-template-rows: 20% 60% 20%;
+    display: block;
     row-gap: 0px;
 
-    padding: 0px 20px;
+    padding: 20px 10px;
     margin: 0px 0px;
   }
   .GetShortLink > :not(:last-child) {
     margin-right: 0px;
   }
+
+  .GetShortLink-field-box {
+    position: relative;
+  }
   .GetShortLink-field {
     align-self: center;
+    height: 58px;
     width: 100%;
+    padding: 10px 10px 10px 15px;
+    border-radius: 30px;
+
+    box-sizing: border-box;
+    background-color: white;
+    border: 2px solid white;
+    box-shadow: 1px 1px 4px rgb(230, 230, 230);
+  }
+  .GetShortLink-field:focus {
+    font-size: 18px;
   }
   .GetShortLink > input {
     margin-bottom: 15px;
   }
+  .GetShortLink-shorten-box {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 15%;
+
+    /* padding: 6px 8px; */
+    padding: 7px 6px;
+
+    border-radius: 30px;
+    background: white;
+  }
   .GetShortLink-shorten {
-    grid-row: 3/4;
-    align-self: start;
     margin-right: 0px;
     width: 100%;
+    height: 100%;
+    padding: 7px;
+
+    border-radius: 100px;
+    box-shadow: 1px 2px 3px rgb(226, 226, 226);
+  }
+  .GetShortLink-shorten-icon {
+    width: 18px;
+    height: 18px;
+
+    animation-name: ButtonSpin;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes ButtonSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
