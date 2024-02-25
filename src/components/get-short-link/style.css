@@ -112,17 +112,10 @@
     top: 2px;
     right: 2px;
     bottom: 2px;
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    width: 58px;
     padding: 7px 7px 7px 11px;
 
-    /* width: 15%; */
-    width: 58px;
-
-    /* padding: 7px 6px; */
-
+    z-index: 10;
     border-radius: 30px;
     background: white;
   }
