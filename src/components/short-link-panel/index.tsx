@@ -10,6 +10,7 @@ import { RiShareForwardFill } from "react-icons/ri";
 import { IoCopy } from "react-icons/io5";
 import { IoCopyOutline } from "react-icons/io5";
 import { MdContentCopy } from "react-icons/md";
+import { IoLink } from "react-icons/io5";
 
 interface ShortLinkPanelProps {
   shortUrl: ShortLinkInfo;
@@ -50,6 +51,7 @@ function ShortLinkPanel({ shortUrl }: ShortLinkPanelProps) {
 
   return (
     <div className="ShortLinkPanel">
+      <div></div>
       <ul className="ShortLinkPanel-icons-list">
         <li className="ShortLinkPanel-icon-box1">
           <RiShareForwardFill className="ShortLinkPanel-icon" />
@@ -64,6 +66,7 @@ function ShortLinkPanel({ shortUrl }: ShortLinkPanelProps) {
       <div className="ShortLinkPanel-link-box">
         <button className="ShortLinkPanel-title" onClick={() => handleClick()}>
           {/* {`https://front- test.hex.team/s/${shortUrl.short}`} */}
+          <IoLink className="ShortLinkPanel-title-icon" />
           {`hex.team/s/${shortUrl.short}`}
         </button>
       </div>
