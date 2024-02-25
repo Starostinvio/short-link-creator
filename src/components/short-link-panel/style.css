@@ -24,14 +24,40 @@
 @media (max-width: 492px) {
   .ShortLinkPanel {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column-reverse;
+
+    align-items: start;
     width: 100%;
     height: 140px;
     margin-bottom: 20px;
   }
-
+  .ShortLinkPanel-link-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
   .ShortLinkPanel-icons-list {
+    align-self: end;
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 6px 3px 2px 3px;
+
+    border-radius: 100px;
+  }
+
+  .ShortLinkPanel-icons-list li {
+    margin-right: 26px;
+
+    color: rgb(40, 43, 58);
+    cursor: pointer;
+  }
+
+  .ShortLinkPanel-icons-list li:hover {
+    color: rgb(26, 150, 252);
+  }
+}
+/* .ShortLinkPanel-icons-list {
     position: relative;
     width: 60px;
     height: 60px;
@@ -39,20 +65,20 @@
     box-sizing: content-box;
     border: 40px solid rgba(16, 202, 202, 0);
     /* border-bottom: 40px solid rgb(233, 233, 233); */
-    border-right: 40px solid rgb(242, 243, 245);
-    /* border-right: 40px solid rgb(117, 117, 117); */
+/* border-right: 40px solid rgb(20, 20, 20); */
+/* border-right: 40px solid rgb(117, 117, 117); */
+/* 
+    border-radius: 50%; */
 
-    border-radius: 50%;
-  }
-
-  .ShortLinkPanel-icons-list::before,
+/* .ShortLinkPanel-icons-list::before,
   .ShortLinkPanel-icons-list::after {
     content: "";
     position: absolute;
 
     border-radius: 50%;
-    background-color: rgb(242, 243, 245);
-    /* background-color: rgb(117, 117, 117); */
+   
+    background-color: rgb(20, 20, 20);
+    
   }
   .ShortLinkPanel-icons-list::before {
     z-index: 5;
@@ -67,45 +93,45 @@
     height: 39.5px;
     bottom: -27px;
     right: -23px;
-  }
+  } */
 
-  .ShortLinkPanel-icons-list li {
+/* .ShortLinkPanel-icons-list li {
     position: absolute;
     z-index: 10;
     padding: 6px 8px;
 
-    /* background: rgb(46, 46, 46); */
+    
     border-radius: 50%;
-    /* color: white; */
+
   }
 
   .ShortLinkPanel-icon-box1 {
     top: -21px;
     left: 49px;
-    /* background: rgb(74, 82, 209); */
-    /* background: rgb(166, 171, 212); */
+
     color: white;
-    background: rgb(185, 58, 197);
+   
+    background: inherit;
   }
   .ShortLinkPanel-icon-box2 {
     top: 14px;
     left: 64px;
     color: white;
-    /* background-color: rgb(166, 171, 212); */
-    background-color: rgb(2, 243, 82);
+   
+    background-color: inherit;
   }
   .ShortLinkPanel-icon-box3 {
     top: 49px;
     left: 50px;
     color: white;
-    background: black;
+    background: inherit;
   }
 
   .ShortLinkPanel-icon {
     width: 16px;
     height: 16px;
-  }
-  /* .ShortLinkPanel-icon-box {
+  }  */
+/* .ShortLinkPanel-icon-box {
     position: relative;
     width: 40px;
     height: 40px;
@@ -135,4 +161,3 @@
     height: 24px;
     color: white;
   } */
-}

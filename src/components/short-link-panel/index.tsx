@@ -8,6 +8,8 @@ import { BsQrCode } from "react-icons/bs";
 import { RiShareForward2Fill } from "react-icons/ri";
 import { RiShareForwardFill } from "react-icons/ri";
 import { IoCopy } from "react-icons/io5";
+import { IoCopyOutline } from "react-icons/io5";
+import { MdContentCopy } from "react-icons/md";
 
 interface ShortLinkPanelProps {
   shortUrl: ShortLinkInfo;
@@ -48,21 +50,23 @@ function ShortLinkPanel({ shortUrl }: ShortLinkPanelProps) {
 
   return (
     <div className="ShortLinkPanel">
-      <button className="ShortLinkPanel-title" onClick={() => handleClick()}>
-        {/* {`https://front- test.hex.team/s/${shortUrl.short}`} */}
-        {`hex.team/s/${shortUrl.short}`}
-      </button>
       <ul className="ShortLinkPanel-icons-list">
         <li className="ShortLinkPanel-icon-box1">
           <RiShareForwardFill className="ShortLinkPanel-icon" />
         </li>
         <li className="ShortLinkPanel-icon-box2">
-          <IoCopy className="ShortLinkPanel-icon" />
+          <MdContentCopy className="ShortLinkPanel-icon" />
         </li>
         <li className="ShortLinkPanel-icon-box3">
           <BsQrCode className="ShortLinkPanel-icon" />
         </li>
       </ul>
+      <div className="ShortLinkPanel-link-box">
+        <button className="ShortLinkPanel-title" onClick={() => handleClick()}>
+          {/* {`https://front- test.hex.team/s/${shortUrl.short}`} */}
+          {`hex.team/s/${shortUrl.short}`}
+        </button>
+      </div>
     </div>
   );
 }
