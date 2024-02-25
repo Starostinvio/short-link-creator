@@ -87,6 +87,7 @@
 
   .GetShortLink-field-box {
     position: relative;
+    margin-bottom: 15px;
   }
   .GetShortLink-field {
     align-self: center;
