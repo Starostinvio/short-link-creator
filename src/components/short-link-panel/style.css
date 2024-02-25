@@ -47,7 +47,7 @@
     border-radius: 100px;
   }
 
-  .ShortLinkPanel-icons-list li {
+  .ShortLinkPanel-icons-list li:not(:last-child) {
     margin-right: 30px;
 
     color: rgb(40, 43, 58);
