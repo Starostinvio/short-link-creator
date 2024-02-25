@@ -140,6 +140,7 @@
 
     animation-name: ButtonSpin;
     animation-duration: 0.4s;
+    animation-delay: 0.4s;
     animation-timing-function: ease;
   }
 }
