@@ -5,7 +5,7 @@
 
   padding: 17px;
   background: white;
-  border-radius: 17px;
+  border-radius: 15px;
   /* box-shadow: 1px 1px 3px rgb(219, 219, 219); */
   /* box-shadow: 1px 1px 15px rgb(241, 241, 241); */
   /* border: 1px solid rgb(245, 245, 245); */
@@ -38,6 +38,7 @@
     /* height: 140px; */
     height: 180px;
     margin-bottom: 20px;
+    border-radius: 30px;
   }
 
   .ShortLinkPanel-link-box {
