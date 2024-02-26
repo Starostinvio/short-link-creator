@@ -3,8 +3,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+Bengali:wght@100..900&family=Quicksand:wght@300..700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 .HeadPanel {
   width: 100%;
-  position: relative;
+  /* position: relative;
+  z-index: 50; */
+  position: fixed;
   z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+
   background: white;
   box-sizing: border-box;
   padding: 10px 70px;
