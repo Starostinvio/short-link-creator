@@ -79,6 +79,7 @@
     row-gap: 0px;
 
     padding: 10px 10px;
+    padding-top: calc(72px + 10px);
     margin: 0px 0px;
   }
   .GetShortLink > :not(:last-child) {
@@ -132,6 +133,19 @@
 
     border-radius: 100px;
     box-shadow: 1px 2px 3px rgb(226, 226, 226);
+  }
+
+  .GetShortLink-shorten-remove {
+    margin-right: 0px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    box-shadow: 1px 2px 3px rgb(226, 226, 226);
+    font-size: 14px;
+    color: white;
+    background-color: rgb(26, 150, 252);
+    cursor: pointer;
   }
   .GetShortLink-shorten-icon {
     min-width: 18px;

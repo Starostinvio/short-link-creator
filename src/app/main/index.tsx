@@ -53,6 +53,7 @@ function Main() {
         {authExists !== null && !authExists && <AccessControl exists={false} />}
         <GetShortLink
           token={state.authReducer.token ? state.authReducer.token : ""}
+          targetUrl={state.shortLinkReducer.shortLink?.target}
         >
           {state.shortLinkReducer.shortLink && (
             <ShortLinkPanel shortUrl={state.shortLinkReducer.shortLink} />

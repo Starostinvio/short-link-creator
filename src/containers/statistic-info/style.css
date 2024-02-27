@@ -5,11 +5,14 @@
 
 @media (max-width: 492px) {
   .Statistic-info {
-    margin: 0px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
+    margin: 0px;
+    padding-top: 72px;
+
     background-color: white;
   }
 }

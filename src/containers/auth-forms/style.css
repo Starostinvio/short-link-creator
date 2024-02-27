@@ -17,9 +17,6 @@
   font-family: "Roboto";
 }
 
-@media (max-width: 479px) {
-}
-
 .AuthForms-img-panel {
   position: relative;
 
@@ -129,6 +126,7 @@
     display: flex;
     justify-content: flex-start;
     padding: 10% 0px;
+    padding-top: calc(72px + 10%);
   }
 
   .AuthForms-title-box {

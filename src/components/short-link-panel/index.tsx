@@ -2,20 +2,17 @@ import "./style.css";
 import { ShortLinkInfo } from "../../types";
 import ClipboardJS from "clipboard";
 import { useEffect } from "react";
-import { BsCopy } from "react-icons/bs";
-import { HiMiniArrowUpTray } from "react-icons/hi2";
 import { BsQrCode } from "react-icons/bs";
-import { RiShareForward2Fill } from "react-icons/ri";
 import { RiShareForwardFill } from "react-icons/ri";
-import { IoCopy } from "react-icons/io5";
-import { IoCopyOutline } from "react-icons/io5";
 import { MdContentCopy } from "react-icons/md";
 import { IoLink } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 interface ShortLinkPanelProps {
   shortUrl: ShortLinkInfo;
 }
 function ShortLinkPanel({ shortUrl }: ShortLinkPanelProps) {
+  const navigate = useNavigate();
   const handleClick = () => {
     const textToCopy = `https://front-test.hex.team/s/${shortUrl.short}`;
 
@@ -49,14 +46,17 @@ function ShortLinkPanel({ shortUrl }: ShortLinkPanelProps) {
     return () => clipboard.destroy();
   }, [shortUrl]);
 
+  const handleMovingTheLink = () => {
+    window.location.assign(`https://front-test.hex.team/s/${shortUrl.short}`);
+  };
+
   return (
     <div className="ShortLinkPanel">
-      <div></div>
       <ul className="ShortLinkPanel-icons-list">
         <li className="ShortLinkPanel-icon-box1">
           <RiShareForwardFill className="ShortLinkPanel-icon" />
         </li>
-        <li className="ShortLinkPanel-icon-box2">
+        <li className="ShortLinkPanel-icon-box2" onClick={() => handleClick()}>
           <MdContentCopy className="ShortLinkPanel-icon" />
         </li>
         <li className="ShortLinkPanel-icon-box3">
@@ -64,8 +64,10 @@ function ShortLinkPanel({ shortUrl }: ShortLinkPanelProps) {
         </li>
       </ul>
       <div className="ShortLinkPanel-link-box">
-        <button className="ShortLinkPanel-title" onClick={() => handleClick()}>
-          {/* {`https://front- test.hex.team/s/${shortUrl.short}`} */}
+        <button
+          className="ShortLinkPanel-title"
+          onClick={() => handleMovingTheLink()}
+        >
           <IoLink className="ShortLinkPanel-title-icon" />
           {`hex.team/s/${shortUrl.short}`}
         </button>

@@ -1,4 +1,4 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { asyncThunkCreator, createAsyncThunk } from "@reduxjs/toolkit";
 import { ShortLinkInfo } from "../../types";
 
 export type GetShortLinkParam = {

@@ -18,7 +18,16 @@ const initialState: ShortLinkSlice = {
 const shortLinkSlice = createSlice({
   name: "@shortLink",
   initialState,
-  reducers: {},
+  reducers: {
+    clearShortLink: (state) => {
+      return {
+        ...state,
+        shortLink: null,
+        status: "idle",
+        error: "",
+      };
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getShortLink.pending, (state, action) => {
@@ -43,5 +52,5 @@ const shortLinkSlice = createSlice({
       });
   },
 });
-
+export const { clearShortLink } = shortLinkSlice.actions;
 export default shortLinkSlice.reducer;
